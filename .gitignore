@@ -1,0 +1,7 @@
+# redundant global ignore paths
+#
+*~
+.DS_Store
+_site
+.sass-cache
+.jekyll-metadata

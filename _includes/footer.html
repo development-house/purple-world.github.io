@@ -1,0 +1,36 @@
+	<script src="js/jquery.min.js"></script>
+	<!--<script>
+	(function() {
+	  var minetoastStatus = "https://us.mc-api.net/v3/server/info/192.99.0.32:25646";
+	  $.getJSON( minetoastStatus, function( json ) {
+	    if (json.status = true) {
+	      $("a.forge").css("border-bottom","3px solid #37C76A");
+	      $("a.forge").append("Online");
+	    }
+	    else if (json.status = false) {
+	      $("a.forge").css("border-bottom","3px solid #cc2c21");
+	      $("a.forge").append("Offline");
+	    }
+	    else {
+	      $("a.forge").append("Searching for API...");
+	    }
+	  })
+	})();
+	</script> -->
+	<script src="js/materialize.min.js"></script>
+	<script src="js/init.js"></script>
+	<footer class="page-footer red">
+		<div class="footer-copyright">
+		  <div class="container">
+			  Made by 
+			  <a class="brown-text text-lighten-3" href="http://chriscawley.com/" target="_blank">
+			  	Carrucan
+			  </a>
+			  <a class="brown-text text-lighten-3" >
+			  </a>
+			  <a class="brown-text text-lighten-4">
+			  	&copy; {{ site.time | date: "%Y" }}
+			  </a>
+		  </div>
+		</div>
+	</footer>
