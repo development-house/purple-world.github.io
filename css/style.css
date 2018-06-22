@@ -142,15 +142,16 @@ nav {
   margin-right: auto;
 }
 .forge {
-  background-color:  #dcb88e;
-  border-radius: 2px 0 !important;
-  border-bottom: 3px solid #cc2c21;
+  background-color: #ffffff;
+  color:#2cbe4e;
+  border-radius: 4px !important;
+  border: 1px solid #2cbe4e;
   text-transform: none;
 }
 .forge:hover {
-  background-color:  #9d7a55;
-  border-radius: 2px 0 !important;
-  border-bottom: 3px solid #77ef86;
+  background-color: #ffffff;
+  border-radius: 4px !important;
+  border: 1px solid #2cbe4e;
 }
 .mine-toast {
   color: rgb(245, 206, 144);
@@ -213,7 +214,7 @@ nav {
     top: 10%;
   }
 }
-}
+
 
 .icon-block {
   padding: 0 15px;
