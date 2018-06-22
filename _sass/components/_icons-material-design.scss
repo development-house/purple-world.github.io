@@ -18,6 +18,42 @@ $mdi-prefix : 'mdi-';
     font-style: normal;
 }
 
+.code-icon {
+    display: block;
+    text-indent: -9999px;
+    width: 82px;
+    height: 82px;
+    background-size: 100px 82px;
+    background: url(../../img/code.svg) no-repeat;
+}
+
+.devops-icon {
+    display: block;
+    text-indent: -9999px;
+    width: 82px;
+    height: 82px;
+    background-size: 100px 82px;
+    background: url(../../img/devops.svg) no-repeat;
+}
+
+.monitor-icon {
+    display: block;
+    text-indent: -9999px;
+    width: 82px;
+    height: 82px;
+    background-size: 100px 82px;
+    background: url(../../img/monitor.svg) no-repeat;
+}
+
+.package-icon {
+    display: block;
+    text-indent: -9999px;
+    width: 82px;
+    height: 82px;
+    background-size: 100px 82px;
+    background: url(../../img/package.svg) no-repeat;
+}
+
 [class^="mdi-"], [class*="mdi-"] {
     speak: none;
     display: inline-block;

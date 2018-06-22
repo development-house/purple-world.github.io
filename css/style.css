@@ -135,9 +135,9 @@ nav {
 .mine-toast-logo {
   display: block !important;
   text-indent: -9999px;
-  width: 91px;
   height: 65px;
-  background: url(../img/minetoast.svg);
+  width: 65px;
+  background: url(../img/bullet.svg) no-repeat;
   margin-left: auto;
   margin-right: auto;
 }
