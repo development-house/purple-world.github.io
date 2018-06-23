@@ -183,7 +183,7 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 4px;
   width: 300px;
-  margin: 59px auto 0;
+  margin: 59px auto;
   background: rgba(41, 41, 41, 0.52);
 }
 
@@ -198,8 +198,6 @@ nav {
   }
   .parallax-container .mine-toast-section {
     width: 100%;
-    position: absolute;
-    top: 11%;
   }
   
   .status {
