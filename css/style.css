@@ -128,6 +128,17 @@ a {
 nav {
   box-shadow: 0 0 0 0;
 }
+.top-container {
+  min-height: 350px!important;
+}
+.splash-title {
+  width: 60%;
+  margin: 100px auto 25px;
+}
+
+.splash-desc {
+  color: #db7515;
+}
 
 .button-collapse {
   color: #26a69a;
