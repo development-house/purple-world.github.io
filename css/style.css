@@ -1,236 +1,270 @@
 /* Custom Stylesheet */
+
+
 /**
  * import all the special little icons we love
  */
- @font-face {
-     font-family: "fontsuperawesome";
-     src:url("../font/fontsuperawesome/fontsuperawesome.eot?v=1");
-     src:url("../font/fontsuperawesome/fontsuperawesome.eot?v=1#iefix") format("embedded-opentype"),
-         url("../font/fontsuperawesome/fontsuperawesome.woff?v=1") format("woff"),
-         url("../font/fontsuperawesome/fontsuperawesome.ttf?v=1") format("truetype"),
-         url("../font/fontsuperawesome/fontsuperawesome.svg?v=1#icons") format("svg");
-     font-weight: normal;
-     font-style: normal;
- }
- /* Apply these base styles to all icons */
- [class^="icon-"]:before, [class*=" icon-"]:before {
-     font-family: fontsuperawesome;
-     speak: none;
-     font-style: normal;
-     font-weight: normal;
-     font-variant: normal;
-     text-transform: none;
-     line-height: 1;
-     text-decoration: none !important;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
- }
- .icon-github:before {
-   content: "\e901";
- }
- .icon-discord:before {
-   content: "\e900";
- }
- .icon-slack:before {
-   content: "\e903";
- }
- .icon-hipchat:before {
-   content: "\e902";
- }
- .icon-jar:before {
-   content: "\e904";
- }
- .icon-jars:before {
-   content: "\e905";
- }
- a.icon-github {
-   font-size: 2em;
-   text-decoration: none;
- }
- a.icon-discord {
-   font-size: 2em;
-   text-decoration: none;
- }
- a.icon-slack {
-   font-size: 2em;
-   text-decoration: none;
- }
- a.icon-hipchat {
-   font-size: 2em;
-   text-decoration: none;
- }
- a.icon-jar {
-   font-size: 2em;
-   text-decoration: none;
-   color: #795548 !important;
- }
- a.icon-jar:hover {
-   color: #cc2c21 !important;
- }
- a.icon-jars{
-   font-size: 2em;
-   text-decoration: none;
-   color: #795548 !important;
- }
- a.icon-jars:hover{
-   color: #cc2c21 !important;
- }
- i.icon-github {
-   font-size: 2em;
-   text-decoration: none;
- }
- i.icon-discord {
-   font-size: 2em;
-   text-decoration: none;
- }
- i.icon-slack {
-   font-size: 2em;
-   text-decoration: none;
- }
- i.icon-hipchat {
-   font-size: 2em;
-   text-decoration: none;
- }
- i.icon-jar {
-   font-size: 2em;
-   text-decoration: none;
- }
- i.icon-jars {
-   font-size: 2em;
-   text-decoration: none;
- }
+
+@font-face {
+    font-family: "fontsuperawesome";
+    src: url("../font/fontsuperawesome/fontsuperawesome.eot?v=1");
+    src: url("../font/fontsuperawesome/fontsuperawesome.eot?v=1#iefix") format("embedded-opentype"), url("../font/fontsuperawesome/fontsuperawesome.woff?v=1") format("woff"), url("../font/fontsuperawesome/fontsuperawesome.ttf?v=1") format("truetype"), url("../font/fontsuperawesome/fontsuperawesome.svg?v=1#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Apply these base styles to all icons */
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: fontsuperawesome;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+    content: "\e901";
+}
+
+.icon-discord:before {
+    content: "\e900";
+}
+
+.icon-slack:before {
+    content: "\e903";
+}
+
+.icon-hipchat:before {
+    content: "\e902";
+}
+
+.icon-jar:before {
+    content: "\e904";
+}
+
+.icon-jars:before {
+    content: "\e905";
+}
+
+a.icon-github {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+a.icon-discord {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+a.icon-slack {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+a.icon-hipchat {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+a.icon-jar {
+    font-size: 2em;
+    text-decoration: none;
+    color: #795548 !important;
+}
+
+a.icon-jar:hover {
+    color: #cc2c21 !important;
+}
+
+a.icon-jars {
+    font-size: 2em;
+    text-decoration: none;
+    color: #795548 !important;
+}
+
+a.icon-jars:hover {
+    color: #cc2c21 !important;
+}
+
+i.icon-github {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+i.icon-discord {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+i.icon-slack {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+i.icon-hipchat {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+i.icon-jar {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+i.icon-jars {
+    font-size: 2em;
+    text-decoration: none;
+}
 
 p {
-  line-height: 2rem;
+    line-height: 2rem;
 }
 
 body {
-  font-weight: 500;
-  font-size: 1em;
-  font-family: 'Raleway', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: 'Raleway', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  outline: none;
-  text-decoration: none;
+    outline: none;
+    text-decoration: none;
 }
 
 .hidden {
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
 }
-
 
 nav {
-  box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
 }
+
 .top-container {
-  min-height: 350px!important;
+    min-height: 350px!important;
 }
+
 .splash-title {
-  width: 60%;
-  margin: 100px auto 25px;
+    width: 60%;
+    margin: 100px auto 25px;
 }
 
 .splash-desc {
-  color: #db7515;
+    color: #db7515;
 }
 
 .button-collapse {
-  color: #26a69a;
-}
-.mine-toast-logo {
-  display: block !important;
-  text-indent: -9999px;
-  height: 65px;
-  width: 65px;
-  background: url(../img/bullet.svg) no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-}
-.forge {
-  background-color: #ffffff;
-  color:#2cbe4e;
-  border-radius: 4px !important;
-  border: 1px solid #2cbe4e;
-  text-transform: none;
-}
-.forge:hover {
-  background-color: #ffffff;
-  border-radius: 4px !important;
-  border: 1px solid #2cbe4e;
-}
-.mine-toast {
-  color: rgb(245, 206, 144);
-  text-shadow: 2px 2px 8px #383636;
-}
-.jam {
-  text-shadow:  1px 1px 6px #383633;
+    color: #26a69a;
 }
 
-.collection-item a.icon-jar.material-icons{
-  font-size: 35px;
+.mine-toast-logo {
+    display: block !important;
+    text-indent: -9999px;
+    height: 65px;
+    width: 65px;
+    background: url(../img/bullet.svg) no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forge {
+    background-color: #ffffff;
+    color: #2cbe4e;
+    border-radius: 4px !important;
+    border: 1px solid #2cbe4e;
+    text-transform: none;
+}
+
+.forge:hover {
+    background-color: #ffffff;
+    border-radius: 4px !important;
+    border: 1px solid #2cbe4e;
+}
+
+.mine-toast {
+    color: rgb(245, 206, 144);
+    text-shadow: 2px 2px 8px #383636;
+}
+
+.jam {
+    text-shadow: 1px 1px 6px #383633;
+}
+
+.collection-item a.icon-jar.material-icons {
+    font-size: 35px;
 }
 
 .collection .collection-item h2.icon-avatar {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
-  left: 15px;
-  top: 17px;
-  display: inline-block;
-  vertical-align: middle;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    left: 15px;
+    top: 17px;
+    display: inline-block;
+    vertical-align: middle;
 }
-.collection-item a.icon-jars.material-icons{
-  font-size: 27px;
+
+.collection-item a.icon-jars.material-icons {
+    font-size: 27px;
 }
 
 .top-card {
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 4px;
-  width: 300px;
-  margin: 59px auto;
-  background: rgba(41, 41, 41, 0.52);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 4px;
+    width: 300px;
+    margin: 59px auto;
+    background: rgba(41, 41, 41, 0.52);
 }
 
 .parallax-container {
-  min-height: 472px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-  .parallax-container .mine-toast-section {
-    width: 100%;
-  }
-  
-  .status {
-    background-color: #959595;
-  }
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+    min-height: 472px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
 }
 
+.parallax-container .section {
+    width: 100%;
+}
+
+.parallax-container .mine-toast-section {
+    width: 100%;
+}
+
+.status {
+    background-color: #959595;
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+    }
+    #index-banner .section {
+        top: 10%;
+    }
+}
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
+
 .icon-block .material-icons {
-  font-size: inherit;
+    font-size: inherit;
 }
 
 footer.page-footer {
-  margin: 0;
+    margin: 0;
 }
