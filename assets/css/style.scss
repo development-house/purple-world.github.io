@@ -1,0 +1,370 @@
+---
+# Front matter to tell Jekyll to compile this file
+---
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Purple World */
+$purple-primary: #27135c;
+$purple-action: #6812e6;
+
+@mixin pw-underline($color) {
+  $size: 25%;
+  $position: 10%;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 0%, 
+    transparent (100% - $size - $position), 
+    $color  (100% - $size - $position), 
+    $color (100% - $position), 
+    transparent (100% - $position), 
+    transparent
+  );
+}
+
+$displayWide: 1920;
+$displayNarrow: 375;
+
+@mixin fluid($property, $minValue, $maxValue) {
+	$x: ($maxValue - $minValue)/($displayWide - $displayNarrow);
+	$y: $maxValue - $displayWide * $x;
+	#{$property}: calc(#{100*$x}vw + #{$y}px);
+
+	@media screen and (max-width: ($displayNarrow - 1px)) {
+			#{$property}: #{$minValue}px
+	};
+
+	@media screen and (min-width: ($displayWide + 1px)) {
+			#{$property}: #{$maxValue}px
+	};
+};
+
+html {
+  user-select: none;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: $purple-primary;
+  color: #ffffff;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+.no-js {
+  .preloader {
+    display: none;
+  }
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: $purple-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .preloader-animation {
+    width: 30px;
+    height: 30px;
+    border: 5px solid white;
+    border-radius: 30px;
+    margin: -15px 0 0 -15px;
+    opacity: 0; 
+    z-index: 110;
+    animation: preloaderAnimation 1s ease-out infinite 0s;
+
+    @keyframes preloaderAnimation {
+      0% {
+        transform: scale(.1);
+        opacity: 0.0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.background {
+  position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  z-index: -100;
+  background: $purple-primary;
+
+	.background-item {
+		position: absolute;
+		top: -5%;
+		left:-5%;
+		width: 110%;
+		height: 110%;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		z-index: -90;
+		opacity: 0;
+		animation: backgroundAnimation 40s linear infinite 0s;
+		filter: grayscale(100%) contrast(1.2);
+		mix-blend-mode: exclusion;
+		will-change: transform;
+		
+		&:nth-of-type(1) {
+			background-image: url("../../img/image1.jpg");
+		}
+
+		&:nth-of-type(2) {
+			background-image: url("../../img/image2.jpg");
+			animation-delay: 10s;
+		}
+
+		&:nth-of-type(3) {
+			background-image: url("../../img/image3.jpg");
+			animation-delay: 20s;
+		}
+
+		&:nth-of-type(4) {
+			background-image: url("../../img/image4.jpg");
+			animation-delay: 30s;
+		}
+	}
+
+	@keyframes backgroundAnimation { 
+		0% {
+			opacity: 0;
+			transform: translateX(-5%);
+		}
+		5% {
+			opacity: 0.25;
+		}
+		25% {
+			opacity: 0.25;
+		}
+		30% {
+			opacity: 0;
+			transform: translateX(5%);
+		}
+	}
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    @include fluid(padding, 35, 50);
+
+    header {
+      a {
+        h1 {
+          @include fluid(font-size, 24, 34);
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #ffffff;
+          @include pw-underline($purple-action);
+        }
+      }
+    }
+
+    .content {
+      h2 {
+        @include fluid(font-size, 32, 54);
+        font-weight: 700;
+        @include pw-underline($purple-action);
+      }
+
+      p {
+        @include fluid(font-size, 16, 18);
+        font-size: 18px;
+        margin-top: 30px;
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+
+      .footer-secondary {
+        display: flex;
+      }
+
+      a {
+        text-decoration: none;
+        margin-right: 15px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        .button {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 700;
+          background: $purple-action;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+          padding: 20px 30px;
+          @include fluid(padding-top, 10, 20);
+          @include fluid(padding-right, 20, 30);
+          @include fluid(padding-bottom, 10, 20);
+          @include fluid(padding-left, 20, 30);
+
+          span,
+          svg {
+            @include fluid(font-size, 14, 18);
+            @include fluid(height, 20, 24);
+            color: white;
+            fill: white;
+            position: relative;
+            z-index: 90;
+            transition: color .3s cubic-bezier(1,0,1,.5), fill .3s cubic-bezier(1,0,1,.5);
+          }
+
+          &.button-main {
+            padding: 20px 80px;
+            @include fluid(padding-top, 10, 20);
+            @include fluid(padding-right, 50, 80);
+            @include fluid(padding-bottom, 10, 20);
+            @include fluid(padding-left, 50, 80);
+          }
+
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
+
+          &:before {
+            background-color: rgba(255,255,255,0.5);
+            transform: translate3d(-100%, 0, 0);
+            transition: transform .3s ease-in;
+          }
+
+          &::after {
+            color: #000000;
+            background-color: #ffffff;
+            transform: translate3d(100%, 0, 0);
+            transition: transform .3s .3s cubic-bezier(.16,.73,.58,.62); 
+          }
+
+          &:hover {
+            span,
+            svg {
+              color: #000000;
+              fill: #000000;
+            }
+
+            &:before {
+              transform: translate3d(0,0,0);
+            }
+            
+            &:after {
+              transform: translate3d(0,0,0);
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      footer { 
+        flex-direction: column;
+        align-items: flex-start;
+
+        .footer-secondary {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,17 +1,10 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 title: Purple World
-email: webmaster@development.house
-description: > # this means to ignore newlines until "baseurl:"
-  Development House LLC is a one man game studio in New Orleans, Louisiana.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://developmenthouse.github.io" # the base hostname & protocol for your site
-
-# Build settings
-markdown: kramdown
+baseurl: ""
+url: "http://purpleworld.net"
+assets:
+  sources:
+    - _assets/scss
+    - _assets/js
+sass:
+  sass_dir: _assets/scss
+  style: :compressed
