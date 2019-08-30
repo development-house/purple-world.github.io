@@ -16,7 +16,7 @@ content_secondary: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. # S
 
 # Primary action
 link_forum: http://forum.purpleworld.net # URL to Forum
-link_forum_tab: true # Open Forum link in new tab; boolean
+link_forum_tab: false # Open Forum link in new tab; boolean
 link_forum_text: Become a citizen # Text for button to Forum
 
 # Secondary actions
