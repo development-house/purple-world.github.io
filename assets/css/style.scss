@@ -130,15 +130,20 @@ a {
   z-index: 100;
   background: $purple-primary;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  svg {
+    height: 30px;
+  }
 
   .preloader-animation {
     width: 30px;
     height: 30px;
     border: 5px solid white;
     border-radius: 30px;
-    margin: -15px 0 0 -15px;
+    margin-top: 20px;
     opacity: 0; 
     z-index: 110;
     animation: preloaderAnimation 1s ease-out infinite 0s;
