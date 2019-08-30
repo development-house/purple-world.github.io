@@ -15,7 +15,8 @@ content_primary: Your favorite purple</br>FiveM roleplay community # Main title
 content_secondary: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. # Subtitle
 
 # Primary action
-link_forum_url: http://forum.purpleworld.net # URL to Forum
+link_forum: http://forum.purpleworld.net # URL to Forum
+link_forum_tab: true # Open Forum link in new tab; boolean
 link_forum_text: Become a citizen # Text for button to Forum
 
 # Secondary actions

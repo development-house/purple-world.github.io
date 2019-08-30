@@ -48,7 +48,7 @@
             </div>
             <footer>
                 <div class="footer-primary">
-                    <a href="{{ page.link_forum_url }}">
+                    <a href="{{ page.link_forum }}" target="{% if page.link_forum_tab == true %}_blank{% endif %}">
                         <div class="button button-main">
                             <span>{{ page.link_forum_text | capitalize }}</span>
                         </div>
