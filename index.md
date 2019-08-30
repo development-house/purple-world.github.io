@@ -20,8 +20,11 @@ link_forum_text: Become a citizen
 
 # Secondary actions
 link_fivem: link-to-fivem
+link_fivem_tab: false
 link_discord: link-to-discord
+link_discord_tab: false
 link_teamspeak: link-to-teamspeak
+link_teamspeak_tab: true
 
 # To change background images, replace images in the "img" folder
 # while keeping the provided file names
