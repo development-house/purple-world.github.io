@@ -9,7 +9,6 @@ layout: default
 title: Purple World
 description: website-description
 keywords: purple, world, gta, rp, roleplay, community
-browser_color: 27135c
 
 # Page content
 content_primary: Your favorite purple</br>FiveM roleplay community
