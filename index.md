@@ -7,7 +7,7 @@ layout: default
 
 # Meta tags
 title: Purple World # Page title
-description: website-description # Page description for searching and sharing
+description: Become a citizen # Page description for searching and sharing
 keywords: purple, world, gta, rp, roleplay, community # Page keywords for searching
 
 # Page content
