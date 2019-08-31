@@ -11,7 +11,7 @@ description: Become a citizen # Page description for searching and sharing
 keywords: purple, world, gta, rp, roleplay, community # Page keywords for searching
 
 # Page content
-content_primary: Your favorite purple</br>roleplay community # Main title
+content_primary: Your favorite purple</br>FiveM roleplay community # Main title
 content_secondary: Apply now for closed testing and whitelist access. # Subtitle
 
 # Primary action
