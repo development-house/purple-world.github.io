@@ -7,25 +7,25 @@ layout: default
 
 # Meta tags
 title: Purple World # Page title
-description: Become a citizen # Page description for searching and sharing
+description:
 keywords: purple, world, gta, rp, roleplay, community # Page keywords for searching
 
 # Page content
-content_primary: Your favorite purple</br>FiveM roleplay community # Main title
-content_secondary: Apply now for closed testing and whitelist access. # Subtitle
+content_primary: Purple</br>World # Main title
+content_secondary:  # Subtitle
 
 # Primary action
-link_forum: http://forum.purpleworld.net # URL to Forum
+link_forum:  # URL to Forum
 link_forum_tab: false # Open Forum link in new tab; boolean
 link_forum_text: Become a citizen # Text for button to Forum
 
 # Secondary actions
-link_fivem: link-to-fivem # URL to FiveM
-link_fivem_tab: true # Open FiveM link in new tab; boolean
-link_discord: https://discord.gg/7xcjmSm # URL to Discord
-link_discord_tab: true # Open Discord link in new tab; boolean
-link_teamspeak: ts3server://purpleworld.TYPEFRAG.COM # URL to Teamspeak
-link_teamspeak_tab: true # Open Teamspeak link in new tab; boolean
+link_fivem:  # URL to FiveM
+link_fivem_tab: false # Open FiveM link in new tab; boolean
+link_discord: # URL to Discord
+link_discord_tab: false # Open Discord link in new tab; boolean
+link_teamspeak: # URL to Teamspeak
+link_teamspeak_tab: false # Open Teamspeak link in new tab; boolean
 
 # To change background images, replace images in the "img" folder
 # while keeping the provided file names
