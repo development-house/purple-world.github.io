@@ -1,0 +1,12 @@
+@import "../../../styles/wrapper.scss";
+
+/* Main */
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include wrapper-x;
+  @include fluid("padding-top", 50, 50);
+  @include fluid("padding-bottom", 50, 50);
+}

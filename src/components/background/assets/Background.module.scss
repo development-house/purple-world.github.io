@@ -1,0 +1,66 @@
+@import "../../../styles/colors.scss";
+
+/* Background */
+.background {
+  position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  z-index: -100;
+  background: $color-background-primary;
+
+	li {
+		position: absolute;
+		top: -5%;
+		left:-5%;
+		width: 110%;
+		height: 110%;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		z-index: -90;
+		opacity: 0;
+		animation: backgroundAnimation 40s linear infinite 0s;
+		filter: grayscale(100%) contrast(1.2);
+		mix-blend-mode: exclusion;
+		will-change: transform;
+		
+		&:nth-of-type(1) {
+			background-image: url("../../../images/image1.jpg");
+		}
+
+		&:nth-of-type(2) {
+			background-image: url("../../../images/image2.jpg");
+			animation-delay: 10s;
+		}
+
+		&:nth-of-type(3) {
+			background-image: url("../../../images/image3.jpg");
+			animation-delay: 20s;
+		}
+
+		&:nth-of-type(4) {
+			background-image: url("../../../images/image4.jpg");
+			animation-delay: 30s;
+		}
+	}
+
+	@keyframes backgroundAnimation { 
+		0% {
+			opacity: 0;
+			transform: translateX(-5%);
+		}
+		5% {
+			opacity: 0.25;
+		}
+		25% {
+			opacity: 0.25;
+		}
+		30% {
+			opacity: 0;
+			transform: translateX(5%);
+		}
+	}
+}

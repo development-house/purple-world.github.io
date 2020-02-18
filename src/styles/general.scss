@@ -1,0 +1,33 @@
+@import "./colors.scss";
+
+/* General */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-background-primary;
+  color: $color-text-primary;
+}
+
+::selection {
+  background-color: transparent;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+  
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}

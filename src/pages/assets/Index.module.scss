@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/underline.scss";
+
+/* Index page */
+.index {
+  h2 {
+    @include fluid("font-size", 32, 54);
+    font-weight: 700;
+    @include underline($color-background-secondary);
+    @include fluid("margin-bottom", 30, 30);
+  }
+
+  p {
+    @include fluid("font-size", 16, 18);
+  }
+}
