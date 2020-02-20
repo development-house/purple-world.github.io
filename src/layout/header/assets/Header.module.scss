@@ -1,9 +1,12 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fluid.scss";
 @import "../../../styles/underline.scss";
+@import "../../../styles/wrapper.scss";
 
 /* Header */
 .header {
+  @include wrapper-x;
+  @include wrapper-top;
   @include fluid("padding-bottom", 35, 50);
 
   a {

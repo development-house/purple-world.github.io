@@ -5,6 +5,13 @@
   font-size: 62.5%;
 }
 
+html,
+body,
+#___gatsby,
+div[role="group"][tabindex] {
+  height: 100%;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   font-weight: normal;
@@ -14,6 +21,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $color-background-primary;
   color: $color-text-primary;
+}
+
+div[role="group"][tabindex] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ::selection {
