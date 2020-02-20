@@ -12,9 +12,9 @@ $padding-y-max: $padding-x-max;
 }
 
 @mixin wrapper-top {
-  @include fluid("padding-top", $padding-y-min, $padding-y-min);
+  @include fluid("padding-top", $padding-y-min, $padding-y-max);
 }
 
 @mixin wrapper-bottom {
-  @include fluid("padding-bottom", $padding-y-min, $padding-y-min);
+  @include fluid("padding-bottom", $padding-y-min, $padding-y-max);
 }

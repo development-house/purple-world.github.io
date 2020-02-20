@@ -1,3 +1,4 @@
+@import "../../../styles/breakpoints.scss";
 @import "../../../styles/colors.scss";
 @import "../../../styles/fluid.scss";
 @import "../../../styles/wrapper.scss";
@@ -21,4 +22,19 @@
       }
     }
   } 
+}
+
+@include mobile {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .group {
+      @include fluid("margin-bottom", 15, 15);
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }  
 }
