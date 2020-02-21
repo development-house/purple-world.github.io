@@ -5,8 +5,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   z-index: 100;
   background: $color-background-primary;
   display: flex;
@@ -18,10 +18,10 @@
     height: 30px;
   }
 
-  .preloader-animation {
+  .preloader_animation {
     width: 30px;
     height: 30px;
-    border: 5px solid white;
+    border: 5px solid $color-text-primary;
     border-radius: 30px;
     margin-top: 20px;
     opacity: 0; 
@@ -42,4 +42,25 @@
       }
     }
   }
+
+  &.preloader_inactive {
+    animation: preloaderInactive 1s forwards 1s;
+
+    @keyframes preloaderInactive {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
 }
+
+.no-js {
+  .preloader {
+    display: none;
+  }
+}
+

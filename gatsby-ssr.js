@@ -1,5 +1,5 @@
-// exports.onRenderBody = ({ setBodyAttributes }) => {
-//   setBodyAttributes({
-//     className: 'preloader'
-//   })
-// }
+exports.onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+    className: 'no-js'
+  })
+}
