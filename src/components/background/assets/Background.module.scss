@@ -28,21 +28,21 @@
 		will-change: transform;
 		
 		&:nth-of-type(1) {
-			background-image: url("../../../images/image1.jpg");
+			background-image: url("../../../../static/background/image1.jpg");
 		}
 
 		&:nth-of-type(2) {
-			background-image: url("../../../images/image2.jpg");
+			background-image: url("../../../../static/background/image2.jpg");
 			animation-delay: 10s;
 		}
 
 		&:nth-of-type(3) {
-			background-image: url("../../../images/image3.jpg");
+			background-image: url("../../../../static/background/image3.jpg");
 			animation-delay: 20s;
 		}
 
 		&:nth-of-type(4) {
-			background-image: url("../../../images/image4.jpg");
+			background-image: url("../../../../static/background/image4.jpg");
 			animation-delay: 30s;
 		}
 	}
