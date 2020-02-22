@@ -60,7 +60,7 @@
 
 .no-js {
   .preloader {
-    display: none;
+    animation: preloaderInactive 1s forwards 1s;
   }
 }
 
