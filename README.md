@@ -2,7 +2,7 @@
   Purple World
 </h1>
 <p align="center">
-  A GTA roleplay project landing page built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+  A Grand Theft Auto V community roleplay server landing page built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
 </p>
 
 
