@@ -46,6 +46,7 @@ const SEO = ({ lang, title }) => {
       <link rel="icon" type="image/png" sizes="16x16" href={`${site.siteMetadata.assets}/favicon-16x16.png`} />
       <link rel="manifest" href={`${site.siteMetadata.assets}/site.webmanifest`} />
       <link rel="mask-icon" href={`${site.siteMetadata.assets}/safari-pinned-tab.svg`} color={colors.purple_secondary} />
+      <meta name="msapplication-config" content={`${site.siteMetadata.assets}/browserconfig.xml`} />
       <meta name="msapplication-TileColor" content={colors.purple_primary} />
       <meta name="theme-color" content={colors.purple_primary} />
     </Helmet>

@@ -3,7 +3,7 @@
     "short_name": "PW",
     "icons": [
         {
-            "src": "/android-chrome-72x72.png",
+            "src": "/meta/android-chrome-72x72.png",
             "sizes": "72x72",
             "type": "image/png"
         }
