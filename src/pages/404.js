@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react'
 import { navigate } from 'gatsby'
 
+import Layout from '../layout/Layout'
+
 const NotFoundPage = () => {
   useEffect(() => {
     navigate('/')
   }, [])
   return (
-    <p>Redirecting...</p>
+    <Layout>
+      <p>Redirecting...</p>
+    </Layout>
   )
 }
 
