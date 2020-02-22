@@ -28,8 +28,8 @@ const Button = ({
 
   return (
     <Tag
-      to={!disabled && (to || null)}
-      href={!disabled && (href || null)}
+      to={!disabled ? to : undefined}
+      href={!disabled ? href : undefined}
       target={target || null}
     >
       <div
