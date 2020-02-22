@@ -15,19 +15,19 @@
   url: "link-to-fivem"
   tab: true
   icon: "fivem.svg"
-  visible: true 
+  visible: false 
 - button:
   name: "discord"
   priority: 2
   url: "link-to-discord"
   tab: true
   icon: "discord.svg"
-  visible: true 
+  visible: false 
 - button:
   name: "teamspeak"
   priority: 3
   url: "link-to-teamspeak"
   tab: true
   icon: "teamspeak.svg"
-  visible: true 
+  visible: false 
   
