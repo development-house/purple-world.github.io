@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import buttonStyle from './assets/Button.module.scss'
 
 const Button = ({
-  to, href, target, className, children, primary, ...other
+  to, href, target, className, children, primary, disabled, ...other
 }) => {
   let Tag = null
   if (to) {
@@ -28,8 +28,8 @@ const Button = ({
 
   return (
     <Tag
-      to={to || null}
-      href={href || null}
+      to={!disabled && (to || null)}
+      href={!disabled && (href || null)}
       target={target || null}
     >
       <div
@@ -48,6 +48,7 @@ Button.propTypes = {
   target: PropTypes.string,
   className: PropTypes.string,
   primary: PropTypes.bool,
+  disabled: PropTypes.bool,
   children: PropTypes.node.isRequired
 }
 
