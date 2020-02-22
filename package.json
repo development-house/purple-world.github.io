@@ -10,7 +10,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "predeploy": "git checkout develop && git add . && git commit -a && git push",
+    "deploy": "gatsby build && gh-pages -d public -b master -m \"Deployed from develop branch \""
   },
   "dependencies": {
     "gatsby": "^2.19.7",
