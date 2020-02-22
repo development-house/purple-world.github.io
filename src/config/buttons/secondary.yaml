@@ -1,0 +1,33 @@
+# ------------------------------------------------------------------------
+# SECONDARY BUTTONS
+# ------------------------------------------------------------------------
+# name - internal label (string)
+# priority - position in group (number)
+# url - link (string)
+# tab - open in new tab (boolean; default: false)
+# icon - file name (string; located in "/static/icons" folder)
+# visible - show on index page (boolean; default: false)
+# ------------------------------------------------------------------------
+
+- button:
+  name: "fivem"
+  priority: 1
+  url: "link-to-fivem"
+  tab: true
+  icon: "fivem.svg"
+  visible: true 
+- button:
+  name: "discord"
+  priority: 2
+  url: "link-to-discord"
+  tab: true
+  icon: "discord.svg"
+  visible: true 
+- button:
+  name: "teamspeak"
+  priority: 3
+  url: "link-to-teamspeak"
+  tab: true
+  icon: "teamspeak.svg"
+  visible: true 
+  

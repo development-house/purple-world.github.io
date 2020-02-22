@@ -1,0 +1,17 @@
+# ------------------------------------------------------------------------
+# PRIMARY BUTTON (call to action)
+# -------------------------------------------------------------------------
+# url - link (string)
+# tab - open in new tab (boolean; default: false)
+# text - button text (string)
+# icon - file name (string; optional; located in "/static/icons" folder)
+# disabled - disable link (boolean; default: false)
+# visible - show on index page (boolean)
+# ------------------------------------------------------------------------
+
+url: "link-to-launcher"
+tab: true
+text: "Become a citizen"
+icon: ""
+disabled: true
+visible: true
