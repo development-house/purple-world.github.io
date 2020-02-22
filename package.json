@@ -10,7 +10,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "predeploy": "git checkout develop && git add . && git commit -a && git push",
+    "predeploy": "git checkout develop && git add . && if [[ $(git diff --exit-code) ]]; then continue; else git commit -a && git push; fi",
     "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master -m \"Deployed from develop branch \""
   },
   "dependencies": {
