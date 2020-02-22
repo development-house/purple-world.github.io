@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'Purple World',
+    description: 'A Grand Theft Auto V community roleplay server.',
+    author: 'bartosjiri <hi@bartosjiri.com>',
+    assets: '/meta'
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -18,7 +19,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'work sans\:400,700'
+          'work sans:400,700'
         ]
       }
     },
@@ -27,13 +28,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'purple-world',
+        short_name: 'purple-world',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'static/icons/favicon.png'
+        display: 'standalone',
+        icon: 'static/meta/favicon.png'
       },
     }
   ]

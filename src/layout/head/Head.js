@@ -1,90 +1,63 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({
-  description, lang, meta, title
-}) {
+import colors from '../../styles/colors.scss'
+
+const SEO = ({ lang, title }) => {
+  useEffect(() => {
+    document.getElementById('preloader').classList.add('preloader_inactive')
+  }, [])
+
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            description
-            author
+            description,
+            author,
+            assets
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: 'description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:title',
-          content: title,
-        },
-        {
-          property: 'og:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata.author,
-        },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+      htmlAttributes={{ lang }}
+      titleTemplate={`${title} - ${site.siteMetadata.title}`}
+      defaultTitle={site.siteMetadata.title}
+    >
+      <meta httpEquiv="Content-Type" content="text/html" />
+      <meta name="description" content={site.siteMetadata.description} />
+      <meta name="author" content={site.siteMetadata.author} />
+      <meta property="og:title" content={site.siteMetadata.title} />
+      <meta property="og:description" content={site.siteMetadata.description} />
+      <meta property="og:image" content={`${site.siteMetadata.assets}/og-image.jpg`} />
+      <meta property="og:image:height" content="1201" />
+      <meta property="og:image:width" content="2294" />
+      <meta property="og:url" content={site.siteMetadata.siteUrl} />
+      <link rel="apple-touch-icon" sizes="180x180" href={`${site.siteMetadata.assets}/apple-touch-icon.png`} />
+      <link rel="icon" type="image/png" sizes="32x32" href={`${site.siteMetadata.assets}/favicon-32x32.png`} />
+      <link rel="icon" type="image/png" sizes="16x16" href={`${site.siteMetadata.assets}/favicon-16x16.png`} />
+      <link rel="manifest" href={`${site.siteMetadata.assets}/site.webmanifest`} />
+      <link rel="mask-icon" href={`${site.siteMetadata.assets}/safari-pinned-tab.svg`} color="#000000" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="theme-color" content={colors.purple} />
+    </Helmet>
   )
 }
 
 SEO.defaultProps = {
-  lang: 'en',
-  meta: [],
-  description: '',
+  lang: 'en'
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO
