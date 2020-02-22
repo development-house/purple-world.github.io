@@ -36,7 +36,6 @@
    gatsby develop
    ```
 
-
 ## Building and running in production
 
 1. Generate a full static production build:
@@ -50,6 +49,10 @@
    ```sh
    gatsby serve
    ```
+
+## Content editing
+
+- Content displayed on page such as texts and buttons can be modified through YAML files located in `/src/config/` subfolders.
 
 ## Deployment
 
