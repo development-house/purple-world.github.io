@@ -7,5 +7,6 @@ $color-background-secondary: #6812e6;
 
 // For export into JS
 :export {
-  purple: $color-background-secondary
+  purple_primary: $color-background-primary;
+  purple_secondary: $color-background-secondary;
 }

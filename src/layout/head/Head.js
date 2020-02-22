@@ -17,6 +17,7 @@ const SEO = ({ lang, title }) => {
           siteMetadata {
             title
             description,
+            siteUrl
             author,
             assets
           }
@@ -37,16 +38,16 @@ const SEO = ({ lang, title }) => {
       <meta property="og:title" content={site.siteMetadata.title} />
       <meta property="og:description" content={site.siteMetadata.description} />
       <meta property="og:image" content={`${site.siteMetadata.assets}/og-image.jpg`} />
-      <meta property="og:image:height" content="1201" />
-      <meta property="og:image:width" content="2294" />
+      <meta property="og:image:height" content="943" />
+      <meta property="og:image:width" content="629" />
       <meta property="og:url" content={site.siteMetadata.siteUrl} />
       <link rel="apple-touch-icon" sizes="180x180" href={`${site.siteMetadata.assets}/apple-touch-icon.png`} />
       <link rel="icon" type="image/png" sizes="32x32" href={`${site.siteMetadata.assets}/favicon-32x32.png`} />
       <link rel="icon" type="image/png" sizes="16x16" href={`${site.siteMetadata.assets}/favicon-16x16.png`} />
       <link rel="manifest" href={`${site.siteMetadata.assets}/site.webmanifest`} />
-      <link rel="mask-icon" href={`${site.siteMetadata.assets}/safari-pinned-tab.svg`} color="#000000" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content={colors.purple} />
+      <link rel="mask-icon" href={`${site.siteMetadata.assets}/safari-pinned-tab.svg`} color={colors.purple_secondary} />
+      <meta name="msapplication-TileColor" content={colors.purple_primary} />
+      <meta name="theme-color" content={colors.purple_primary} />
     </Helmet>
   )
 }

@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Purple World',
     description: 'A Grand Theft Auto V community roleplay server.',
+    siteUrl: 'https://purpleworld.net',
     author: 'bartosjiri <hi@bartosjiri.com>',
-    assets: '/meta'
+    assets: '/meta',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -24,16 +25,6 @@ module.exports = {
       }
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'purple-world',
-        short_name: 'purple-world',
-        start_url: '/',
-        display: 'standalone',
-        icon: 'static/meta/favicon.png'
-      },
-    }
+    'gatsby-plugin-sharp'
   ]
 }

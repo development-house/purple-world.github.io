@@ -1,0 +1,14 @@
+{
+    "name": "Purple World",
+    "short_name": "PW",
+    "icons": [
+        {
+            "src": "/android-chrome-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#27135c",
+    "background_color": "#27135c",
+    "display": "standalone"
+}
