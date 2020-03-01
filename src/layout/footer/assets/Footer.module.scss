@@ -15,6 +15,7 @@
     display: flex;
 
     a {
+      display: flex;
       @include fluid("margin-right", 15, 15);
 
       &:last-of-type {
@@ -31,6 +32,18 @@
 
     .group {
       @include fluid("margin-bottom", 15, 15);
+
+      &:first-of-type {
+        flex-direction: column;
+
+        a {
+          @include fluid("margin-bottom", 15, 15);
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
 
       &:last-of-type {
         margin-bottom: 0;

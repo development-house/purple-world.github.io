@@ -1,6 +1,8 @@
 # ------------------------------------------------------------------------
 # PRIMARY BUTTON (call to action)
 # -------------------------------------------------------------------------
+# name - internal label (string)
+# priority - position in group (number)
 # url - link (string)
 # tab - open in new tab (boolean; default: false)
 # text - button text (string)
@@ -9,9 +11,21 @@
 # visible - show on index page (boolean)
 # ------------------------------------------------------------------------
 
-url: "link-to-launcher"
-tab: true
-text: "Coming soon"
-icon: ""
-disabled: true
-visible: true
+- button:
+  name: "launcher"
+  priority: 1
+  url: "link-to-launcher"
+  tab: true
+  text: "Coming soon"
+  icon: ""
+  disabled: true
+  visible: true
+- button:
+  name: "patreon"
+  priority: 1
+  url: "https://www.patreon.com/purpleworld"
+  tab: true
+  text: "Patreon"
+  icon: ""
+  disabled: false
+  visible: true
