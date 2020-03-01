@@ -22,7 +22,7 @@
   visible: true
 - button:
   name: "patreon"
-  priority: 1
+  priority: 2
   url: "https://www.patreon.com/purpleworld"
   tab: true
   text: "Patreon"

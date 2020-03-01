@@ -13,8 +13,8 @@ const Footer = () => (
     <div className={footerStyle.group}>
       {primaryButtonData
         .sort((a, b) => ((a.priority > b.priority) ? 1 : -1))
-      .map(button => (
-        button.visible && (
+        .map(button => (
+          button.visible && (
             <Button
               href={button.url}
               target={button.tab && '_blank'}
@@ -22,13 +22,11 @@ const Footer = () => (
               disabled={button.disabled}
             >
               <span>{button.text}</span>
-              <SVG src={`/icons/${button.icon}`} />
+              {button.icon && (<SVG src={`/icons/${button.icon}`} />)}
             </Button>
           )
-        ))
-      }
+        ))}
     </div>
-
 
     <div className={footerStyle.group}>
       {secondaryButtonData
@@ -40,7 +38,7 @@ const Footer = () => (
               href={button.url}
               target={button.tab && '_blank'}
             >
-              <SVG src={`/icons/${button.icon}`} />
+              {button.icon && (<SVG src={`/icons/${button.icon}`} />)}
             </Button>
           )
         ))}
