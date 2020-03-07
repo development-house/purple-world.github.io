@@ -42,14 +42,14 @@
 
   &:before {
     background-color: rgba($color-text-primary, 0.5);
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-101%, 0, 0);
     transition: transform .3s ease-in;
   }
 
   &:after {
     color: $color-text-secondary;
     background-color: $color-text-primary;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(101%, 0, 0);
     transition: transform .3s .3s cubic-bezier(.16,.73,.58,.62); 
   }
 
