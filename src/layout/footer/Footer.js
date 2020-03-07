@@ -16,6 +16,7 @@ const Footer = () => (
         .map(button => (
           button.visible && (
             <Button
+              key={button.name}
               href={button.url}
               target={button.tab && '_blank'}
               primary
