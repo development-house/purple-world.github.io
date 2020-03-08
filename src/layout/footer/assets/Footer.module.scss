@@ -15,7 +15,6 @@
     display: flex;
 
     a {
-      display: flex;
       @include fluid("margin-right", 15, 15);
 
       &:last-of-type {
