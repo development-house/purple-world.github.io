@@ -24,6 +24,9 @@ const Button = ({
   if (primary) {
     classNamesArray.push(buttonStyle.primary)
   }
+  if (disabled) {
+    classNamesArray.push(buttonStyle.disabled)
+  }
   const classNames = classNamesArray.join(' ')
 
   return (

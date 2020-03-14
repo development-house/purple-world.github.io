@@ -68,13 +68,35 @@
       transform: translate3d(0,0,0);
     }
   }
-}
 
-.primary {
-  @include fluid("padding-right", 50, 80);
-  @include fluid("padding-left", 50, 80);
+  &.primary {
+    @include fluid("padding-right", 50, 80);
+    @include fluid("padding-left", 50, 80);
 
-  svg {
-    margin-left: 1rem;
+    svg {
+      margin-left: 1rem;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    
+    span,
+    svg {
+      opacity: 0.5;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      span,
+      svg {
+        color: inherit;
+        fill: inherit;
+      }
+    }
   }
 }
