@@ -6,6 +6,7 @@
 # url - link (string)
 # tab - open in new tab (boolean; default: false)
 # icon - file name (string; located in "/static/icons" folder)
+# disabled - disable link (boolean; default: false)
 # visible - show on index page (boolean; default: false)
 # ------------------------------------------------------------------------
 
@@ -15,6 +16,7 @@
   url: "link-to-fivem"
   tab: true
   icon: "fivem.svg"
+  disabled: false
   visible: false 
 - button:
   name: "discord"
@@ -22,6 +24,7 @@
   url: "link-to-discord"
   tab: true
   icon: "discord.svg"
+  disabled: false
   visible: false 
 - button:
   name: "teamspeak"
@@ -29,5 +32,6 @@
   url: "link-to-teamspeak"
   tab: true
   icon: "teamspeak.svg"
+  disabled: false
   visible: false 
   

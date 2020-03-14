@@ -38,6 +38,7 @@ const Footer = () => (
               key={button.name}
               href={button.url}
               target={button.tab && '_blank'}
+              disabled={button.disabled}
             >
               {button.icon && (<SVG src={`/icons/${button.icon}`} />)}
             </Button>
