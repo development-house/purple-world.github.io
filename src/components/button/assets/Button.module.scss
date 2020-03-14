@@ -94,8 +94,8 @@
     &:hover {
       span,
       svg {
-        color: inherit;
-        fill: inherit;
+        color: $color-text-primary;
+        fill: $color-text-primary;
       }
     }
   }
