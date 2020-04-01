@@ -28,4 +28,4 @@
   text: "Patreon"
   icon: ""
   disabled: false
-  visible: true
+  visible: false
