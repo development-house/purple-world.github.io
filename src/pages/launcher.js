@@ -22,9 +22,7 @@ const LauncherPage = () => {
   }, [])
 
   useEffect(() => {
-    setTimeout(() => {
-      setMode('manual')
-    }, 7500)
+    setMode('manual')
   }, [version])
 
   let link = `https://github.com/${owner}/${repository}/releases`
