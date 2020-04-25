@@ -21,11 +21,11 @@
 - button:
   name: "discord"
   priority: 2
-  url: "link-to-discord"
+  url: "https://discord.gg/xTSA32P"
   tab: true
   icon: "discord.svg"
   disabled: false
-  visible: false 
+  visible: true 
 - button:
   name: "teamspeak"
   priority: 3

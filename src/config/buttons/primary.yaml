@@ -14,11 +14,11 @@
 - button:
   name: "launcher"
   priority: 1
-  url: "link-to-launcher"
-  tab: true
-  text: "Coming soon"
+  url: "launcher"
+  tab: false
+  text: "Download launcher"
   icon: ""
-  disabled: true
+  disabled: false
   visible: true
 - button:
   name: "patreon"
