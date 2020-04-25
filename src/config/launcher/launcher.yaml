@@ -1,0 +1,11 @@
+# ------------------------------------------------------------------------
+# LAUNCHER DOWNLOAD
+# ------------------------------------------------------------------------
+# owner - GitHub username (string)
+# repository - repository name (string)
+# filename - name of file without version (string)
+# ------------------------------------------------------------------------
+
+owner: "purple-world"
+repository: "to-be-done"
+filename: "Purple-World-Launcher-Setup"
