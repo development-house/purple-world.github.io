@@ -18,5 +18,9 @@
       @include underline($color-background-secondary);
       color: $color-text-primary;
     }
+
+    img {
+      @include fluid("height", 90, 140);
+    }
   }
 }
