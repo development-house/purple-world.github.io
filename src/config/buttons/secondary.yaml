@@ -33,5 +33,21 @@
   tab: true
   icon: "teamspeak.svg"
   disabled: false
-  visible: false 
+  visible: false
+- button:
+  name: "twitter"
+  priority: 4
+  url: "https://twitter.com/PurpleWorldRP"
+  tab: true
+  icon: "twitter.svg"
+  disabled: false
+  visible: true 
+- button:
+  name: "patreon"
+  priority: 5
+  url: "https://www.patreon.com/purpleworld"
+  tab: true
+  icon: "patreon.svg"
+  disabled: false
+  visible: true 
   

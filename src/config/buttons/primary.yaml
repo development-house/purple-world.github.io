@@ -23,9 +23,9 @@
 - button:
   name: "patreon"
   priority: 2
-  url: "https://www.patreon.com/purpleworld"
+  url: "https://purpleworld.net"
   tab: true
-  text: "Patreon"
+  text: "Forums"
   icon: ""
   disabled: false
-  visible: false
+  visible: true
