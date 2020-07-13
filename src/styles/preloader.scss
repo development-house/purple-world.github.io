@@ -18,15 +18,19 @@
     height: 30px;
   }
 
+  img {
+    z-index: 120;
+  }
+
   .preloader_animation {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    width: 140px;
+    height: 140px;
     border: 5px solid $color-text-primary;
-    border-radius: 30px;
-    margin-top: 20px;
+    border-radius: 50%;
     opacity: 0; 
     z-index: 110;
-    animation: preloaderAnimation 1s ease-out infinite 0s;
+    animation: preloaderAnimation 1.5s ease-out infinite 0s;
 
     @keyframes preloaderAnimation {
       0% {
@@ -44,7 +48,7 @@
   }
 
   &.preloader_inactive {
-    animation: preloaderInactive 1s forwards 1s;
+    animation: preloaderInactive 1.5s forwards 1.5s;
 
     @keyframes preloaderInactive {
       0% {
