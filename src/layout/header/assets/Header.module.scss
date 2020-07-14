@@ -1,5 +1,6 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/fluid.scss";
+@import "../../../styles/logo.scss";
 @import "../../../styles/underline.scss";
 @import "../../../styles/wrapper.scss";
 
@@ -20,7 +21,7 @@
     }
 
     img {
-      @include fluid("height", 90, 140);
+      @include logo-fluid;
     }
   }
 }

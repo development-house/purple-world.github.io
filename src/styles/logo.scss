@@ -1,0 +1,6 @@
+@import "./fluid.scss";
+
+/* Logo */
+@mixin logo-fluid {
+  @include fluid("height", 90, 140);
+}

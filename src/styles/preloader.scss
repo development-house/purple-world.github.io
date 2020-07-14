@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./fluid.scss";
 
 /* Preloader */
 .preloader {
@@ -24,8 +25,8 @@
 
   .preloader_animation {
     position: absolute;
-    width: 140px;
-    height: 140px;
+    @include fluid("width", 90, 140);
+    @include fluid("height", 90, 140);
     border: 5px solid $color-text-primary;
     border-radius: 50%;
     opacity: 0; 
