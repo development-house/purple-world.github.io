@@ -1,6 +1,6 @@
-<h1 align="center">
-  Purple World
-</h1>
+<p align="center">
+  <a href="https://play.purpleworld.net" target="_blank"><img src="static/logo/logo.png" alt="Purple World" /></a>
+</p>
 <p align="center">
   A Grand Theft Auto V community roleplay server landing page built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
 </p>
@@ -8,8 +8,7 @@
 
 ## Preview
 
-```TBD```
-
+![Purple World landing website preview](static/preview/preview.png)
 
 
 ## Installation & set up
