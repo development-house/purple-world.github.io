@@ -21,10 +21,10 @@
   disabled: false
   visible: true
 - button:
-  name: "patreon"
+  name: "forums"
   priority: 2
   url: "https://purpleworld.net"
-  tab: true
+  tab: false
   text: "Forums"
   icon: ""
   disabled: false
