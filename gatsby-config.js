@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Purple World',
-    description: 'A Grand Theft Auto V community roleplay server.',
+    description: 'A FiveM community roleplay server',
     siteUrl: 'https://purpleworld.net',
     author: 'bartosjiri <hi@bartosjiri.com>',
     assets: '/meta',

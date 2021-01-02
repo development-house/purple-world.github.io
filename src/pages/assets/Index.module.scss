@@ -7,7 +7,7 @@
   h2 {
     @include fluid("font-size", 32, 54);
     font-weight: 700;
-    @include underline($color-background-secondary);
+    // @include underline($color-background-secondary);
   }
 
   p {
