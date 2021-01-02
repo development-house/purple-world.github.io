@@ -27,13 +27,13 @@
   disabled: false
   visible: true 
 - button:
-  name: "teamspeak"
+  name: "reddit"
   priority: 3
-  url: "link-to-teamspeak"
+  url: "https://www.reddit.com/r/PurpleWorld"
   tab: true
-  icon: "teamspeak.svg"
+  icon: "reddit.svg"
   disabled: false
-  visible: false
+  visible: true
 - button:
   name: "twitter"
   priority: 4
