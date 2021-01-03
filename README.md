@@ -59,8 +59,4 @@
 
 ## Deployment
 
-1. Run the deployment script:
-    ```
-    npm run deploy
-    ```
-    Warning: *This pushes directly to remote master branch and triggers GitHub Pages rebuild hook!*
+1. Push your commits to the `develop` branch. Github Actions will automatically build and deploy the site. Keep in mind there is a soft limit for the number of deploys - push your commits in batches.
