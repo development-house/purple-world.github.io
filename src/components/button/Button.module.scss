@@ -1,0 +1,69 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/transitions.scss";
+
+/* Button */
+.button {
+  display: inline-flex;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  background: $color-background-secondary;
+  overflow: hidden;
+  cursor: pointer;
+  @include fluid("padding-top", 10, 20);
+  @include fluid("padding-right", 20, 30);
+  @include fluid("padding-bottom", 10, 20);
+  @include fluid("padding-left", 20, 30);
+  @include transition(background, $transition-primary);
+
+  span,
+  svg {
+    position: relative;
+    @include fluid(height, 20, 24);
+    @include fluid(font-size, 14, 18);
+    color: $color-text-primary;
+    fill: $color-text-primary;
+    z-index: 90;
+    @include transition(color, fill, $transition-primary);
+  }
+
+  &:hover {
+    background: $color-text-primary;
+
+    span,
+    svg {
+      color: $color-text-secondary;
+      fill: $color-text-secondary;
+    }
+  }
+
+  &.primary {
+    @include fluid("padding-right", 50, 80);
+    @include fluid("padding-left", 50, 80);
+
+    svg {
+      margin-left: 1rem;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    
+    span,
+    svg {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background: $color-background-secondary;
+
+      span,
+      svg {
+        color: $color-text-primary;
+        fill: $color-text-primary;
+      }
+    }
+  }
+}

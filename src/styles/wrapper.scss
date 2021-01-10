@@ -7,14 +7,14 @@ $padding-y-min: $padding-x-min;
 $padding-y-max: $padding-x-max;
 
 @mixin wrapper-x {
-  @include fluid("padding-left", $padding-x-min, $padding-x-max);
-  @include fluid("padding-right", $padding-x-min, $padding-x-max);
+  @include fluid(padding-left, $padding-x-min, $padding-x-max);
+  @include fluid(padding-right, $padding-x-min, $padding-x-max);
 }
 
 @mixin wrapper-top {
-  @include fluid("padding-top", $padding-y-min, $padding-y-max);
+  @include fluid(padding-top, $padding-y-min, $padding-y-max);
 }
 
 @mixin wrapper-bottom {
-  @include fluid("padding-bottom", $padding-y-min, $padding-y-max);
+  @include fluid(padding-bottom, $padding-y-min, $padding-y-max);
 }

@@ -1,0 +1,38 @@
+@import "../../styles/colors.scss";
+
+/* Background */
+.background {
+  position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  z-index: -100;
+  background: $color-background-primary;
+
+	li {
+		position: absolute;
+		bottom: -5%;
+		left:-5%;
+		width: 110%;
+		height: 110%;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		z-index: -90;
+		opacity: 0;
+		filter: grayscale(100%) contrast(1.2);
+		mix-blend-mode: exclusion;
+    will-change: transform;
+
+    img {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			object-fit: cover;
+			min-width: 100%;
+			height: 100%;
+    }
+	}
+}

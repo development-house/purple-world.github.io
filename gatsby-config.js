@@ -7,8 +7,12 @@ module.exports = {
     assets: '/meta',
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('node-sass'),
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -24,7 +28,7 @@ module.exports = {
         ]
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
-  ]
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+  ],
 }

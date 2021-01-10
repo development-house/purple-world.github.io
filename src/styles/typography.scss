@@ -1,0 +1,10 @@
+/* Typography */
+$font-weight-base: 400;
+$font-weight-bold: 700;
+
+@mixin font-type-base {
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}

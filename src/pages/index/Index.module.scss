@@ -1,0 +1,66 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/typography.scss";
+
+/* Index page */
+.index {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .logo {
+    @include fluid(margin-bottom, 30, 40);
+  }
+
+  .content {
+    h1 {
+      @include fluid(font-size, 32, 54);
+      font-weight: $font-weight-bold;
+    }
+  
+    p {
+      @include fluid(font-size, 16, 20);
+      @include fluid(margin-top, 30, 40);
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fluid(margin-top, 30, 40);
+  
+    .list {
+      .item {
+        @include fluid(margin-right, 15, 15);
+  
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .list {
+        @include fluid("margin-bottom", 15, 15);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .item {
+          @include fluid("margin-bottom", 15, 15);
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

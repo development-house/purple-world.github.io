@@ -25,8 +25,8 @@
 
   .preloader_animation {
     position: absolute;
-    @include fluid("width", 90, 140);
-    @include fluid("height", 90, 140);
+    @include fluid(width, 90, 140);
+    @include fluid(height, 90, 140);
     border: 5px solid $color-text-primary;
     border-radius: 50%;
     opacity: 0; 

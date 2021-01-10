@@ -1,0 +1,21 @@
+# ------------------------------------------------------------------------
+# INDEX PAGE LINKS
+# -------------------------------------------------------------------------
+# name - internal label (string)
+# priority - position in group (number)
+# to - link to local page (string; optional)
+# href - link to external site (string; optional)
+# tab - open in new tab (boolean; default: false)
+# text - button text (string)
+# ------------------------------------------------------------------------
+
+- button:
+  name: "launcher"
+  priority: 1
+  to: "/launcher"
+  text: "Download launcher"
+- button:
+  name: "forums"
+  priority: 2
+  href: "https://purpleworld.net"
+  text: "Forums"

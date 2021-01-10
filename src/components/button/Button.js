@@ -1,49 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 
-import buttonStyle from './assets/Button.module.scss'
+import style from './Button.module.scss'
 
 const Button = ({
-  to, href, target, className, children, primary, disabled, ...other
-}) => {
-  let Tag = null
-  if (to) {
-    Tag = Link
-  } else if (href) {
-    Tag = 'a'
-  } else {
-    // eslint-disable-next-line no-console
-    console.error('Tag for Button not specified')
-  }
-
-  const classNamesArray = [buttonStyle.button]
-  if (className) {
-    classNamesArray.push(className)
-  }
-  if (primary) {
-    classNamesArray.push(buttonStyle.primary)
-  }
-  if (disabled) {
-    classNamesArray.push(buttonStyle.disabled)
-  }
-  const classNames = classNamesArray.join(' ')
-
-  return (
-    <Tag
-      to={!disabled ? to : undefined}
-      href={!disabled ? href : undefined}
-      target={target || null}
-    >
-      <div
-        className={classNames}
-        {...other}
-      >
-        {children}
-      </div>
-    </Tag>
-  )
-}
+  className, primary, disabled, children, ...props
+}) => (
+  <div
+    className={`${style.button} ${primary ? style.primary : ''} ${disabled ? style.disabled : ''} ${className || ''}`}
+    {...props}
+  >
+    {children}
+  </div>
+)
 
 Button.propTypes = {
   to: PropTypes.string,

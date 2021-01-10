@@ -1,0 +1,18 @@
+@import "../../styles/wrapper.scss";
+
+/* Main */
+.main {
+  position: relative;
+  min-height: 100vh;
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include wrapper-x;
+    @include fluid("padding-top", 50, 50);
+    @include fluid("padding-bottom", 50, 50);
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../styles/fluid.scss";
+
+/* Logo */
+.logo {
+  display: inline-flex;
+  
+  img {
+    display: block;
+    @include fluid(height, 90, 140);
+  }
+}

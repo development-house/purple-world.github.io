@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import mainStyle from './assets/Main.module.scss'
+import style from './Main.module.scss'
 
-const Main = ({ children }) => (
-  <main className={mainStyle.main}>
-    {children}
+const Main = ({children}) => (
+  <main className={style.main}>
+    <div className={style.wrapper}>
+      {children}
+    </div>
   </main>
 )
 

@@ -19,7 +19,7 @@
 
 1. Install Gatsby CLI:
     ```
-    npm install -g gatsby-cli
+    npm i -g gatsby-cli
     ```
 
 2. Clone the repository:
@@ -29,8 +29,8 @@
 
 3. Navigate to the project folder and install dependencies:
    ```sh
-   cd purple-world
-   npm install
+   cd purple-world.github.io
+   yarn
    ```
 
 4. Start the development server:
@@ -55,7 +55,7 @@
 
 ## Content editing
 
-- Content displayed on page such as texts and buttons can be modified through YAML files located in `/src/config/` subfolders.
+- Content displayed on page such as texts and buttons can be modified through YAML files located in `/configuration/` subfolders.
 
 ## Deployment
 

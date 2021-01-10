@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Image1 from '../../../static/background/image1.jpg'
-import Image2 from '../../../static/background/image2.jpg'
-import Image3 from '../../../static/background/image3.jpg'
-import Image4 from '../../../static/background/image4.jpg'
+import Image1 from '../../../static/images/background/image1.jpg'
+import Image2 from '../../../static/images/background/image2.jpg'
+import Image3 from '../../../static/images/background/image3.jpg'
+import Image4 from '../../../static/images/background/image4.jpg'
 
-import backgroundStyle from './assets/Background.module.scss'
+import style from './Background.module.scss'
 
 const Background = () => {
   const imagesList = [Image1, Image2, Image3, Image4]
@@ -31,7 +31,7 @@ const Background = () => {
   `
 
   return (
-    <ul className={backgroundStyle.background}>
+    <ul className={style.background}>
       <style>{animatonKeyframes}</style>
       {imagesList && imagesList.length && imagesList.map((item, i) => (
         <li
