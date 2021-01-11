@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://play.purpleworld.net" target="_blank"><img src="static/logo/logo.png" alt="Purple World" /></a>
+  <a href="https://play.purpleworld.net" target="_blank"><img src="static/images/logo/logo.png" alt="Purple World" /></a>
 </p>
 <h1 align="center">
   Landing page
@@ -12,7 +12,7 @@
 
 ## Preview
 
-![Purple World landing website preview](static/preview/preview.png)
+![Purple World landing website preview](static/docs/preview.png)
 
 
 ## Installation & set up

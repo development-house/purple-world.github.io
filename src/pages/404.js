@@ -1,11 +1,11 @@
-import React, {useEffect} from "react"
-import {navigate} from "gatsby"
+import React, {useEffect} from 'react'
+import {navigate} from 'gatsby'
 
-import Layout from "../layout/Layout"
+import Layout from '../layout/Layout'
 
 const NotFoundPage = () => {
   useEffect(() => {
-    navigate("/")
+    navigate('/')
   }, [])
 
   return (

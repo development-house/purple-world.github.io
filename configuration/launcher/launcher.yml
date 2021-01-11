@@ -1,9 +1,10 @@
 # ------------------------------------------------------------------------
 # LAUNCHER PAGE DOWNLOAD
 # ------------------------------------------------------------------------
-# owner - GitHub username (string)
-# repository - repository name (string)
-# filename - name of file without version (string)
+# owner: GitHub username (string)
+# repository: repository name (string)
+# filename: name of file without version (string)
+# extension: file format extension (string)
 # ------------------------------------------------------------------------
 
 owner: "purple-world"

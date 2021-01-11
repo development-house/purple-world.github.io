@@ -31,7 +31,7 @@ const IndexPage = () => (
             .sort((a, b) => ((a.priority > b.priority) ? 1 : -1))
             .map(link => (
               <Link
-                key={link.name}
+                key={link.link}
                 className={style.item}
                 href={link.href}
                 to={link.to}
@@ -49,7 +49,7 @@ const IndexPage = () => (
             .sort((a, b) => ((a.priority > b.priority) ? 1 : -1))
             .map(social => (
               <Link
-                key={social.name}
+                key={social.social}
                 className={style.item}
                 href={social.href}
                 target="_blank"
