@@ -1,0 +1,86 @@
+# ------------------------------------------------------------------------
+# KEYBINDINGS PAGE KEYBINDS
+# ------------------------------------------------------------------------
+# keybind:
+# - desc: keybind description (array of items in "./keys.yml" file)
+# - tags: keybind group (array of items in "./tags.yml" file)
+# ------------------------------------------------------------------------
+
+- keybind: ["W"]
+  desc: "Movement"
+  tags: ["general, vehicle"]
+- keybind: ["A"]
+  desc: "Movement"
+  tags: ["general, vehicle"]
+- keybind: ["S"]
+  desc: "Movement"
+  tags: ["general, vehicle"]
+- keybind: ["D"]
+  desc: "Movement"
+  tags: ["general, vehicle"]
+- keybind: ["CTRL"]
+  desc: "Crouch"
+  tags: ["general"]
+- keybind: ["SHIFT"]
+  desc: "Sprint"
+  tags: ["general"]
+- keybind: ["E"]
+  desc: "Interaction"
+  tags: ["general"]
+- keybind: ["T"]
+  desc: "Chat"
+  tags: ["general"]
+- keybind: ["Y"]
+  desc: "Player IDs"
+  tags: ["general"]
+- keybind: ["U"]
+  desc: "Vehicle lock"
+  tags: ["general", "vehicle"]
+- keybind: ["F"]
+  desc: "Enter/exit vehicle"
+  tags: ["general", "vehicle"]
+- keybind: ["G"]
+  desc: "Glovebox"
+  tags: ["vehicle"]
+- keybind: ["Z"]
+  desc: "Radial menu"
+  tags: ["general"]
+- keybind: ["X"]
+  desc: "Hands up"
+  tags: ["general"]
+- keybind: ["C"]
+  desc: "Look behind"
+  tags: ["general", "vehicle"]
+- keybind: ["V"]
+  desc: "Change camera"
+  tags: ["general", "vehicle"]
+- keybind: ["B"]
+  desc: "Point at"
+  tags: ["general"]
+- keybind: ["B"]
+  desc: "Seatbelt"
+  tags: ["vehicle"]
+- keybind:  ["F1"]
+  desc: "Voice volume"
+  tags: ["general"]
+- keybind: ["F5"]
+  desc: "Command job menu"
+  tags: ["job"]
+- keybind: ["F6"]
+  desc: "Job menu"
+  tags: ["job"]
+- keybind: ["F7"]
+  desc: "Bills menu"
+  tags: ["general"]
+- keybind: ["F10"]
+  desc: "Player list"
+  tags: ["general"]
+- keybind: ["TAB"]
+  desc: "Inventory"
+  tags: ["general"]
+- keybind: ["CAPS LOCK"]
+  desc: "Radio"
+  tags: ["general"]
+- keybind: ["ALT", "W"]
+  desc: "Cruise control"
+  tags: ["vehicle"]

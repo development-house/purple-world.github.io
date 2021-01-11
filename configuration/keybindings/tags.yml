@@ -1,0 +1,15 @@
+# ------------------------------------------------------------------------
+# KEYBINDINGS PAGE TAGS
+# ------------------------------------------------------------------------
+# Available tag definitions
+# ------------------------------------------------------------------------
+
+- tag: "general"
+  title: "General"
+  color: "white"
+- tag: "vehicle"
+  title: "Vehicle"
+  color: "green"
+- tag: "job"
+  title: "Jobs"
+  color: "orange"

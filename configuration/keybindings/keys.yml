@@ -1,0 +1,99 @@
+# ------------------------------------------------------------------------
+# KEYBINDINGS PAGE KEYS
+# ------------------------------------------------------------------------
+# Available key definitions
+# ------------------------------------------------------------------------
+
+# F row
+- key: "ESC"
+- key: "F1"
+- key: "F2"
+- key: "F3"
+- key: "F4"
+- key: "F5"
+- key: "F6"
+- key: "F7"
+- key: "F8"
+- key: "F9"
+- key: "F10"
+- key: "F11"
+- key: "F12"
+
+# Num row
+- key: "`"
+- key: "1"
+- key: "2"
+- key: "3"
+- key: "4"
+- key: "5"
+- key: "6"
+- key: "7"
+- key: "8"
+- key: "9"
+- key: "0"
+- key: "-"
+- key: "="
+- key: "BACKSPACE"
+
+# 1st row
+- key: "TAB"
+- key: "Q"
+- key: "W"
+- key: "E"
+- key: "R"
+- key: "T"
+- key: "Y"
+- key: "U"
+- key: "I"
+- key: "O"
+- key: "P"
+- key: "["
+- key: "]"
+- key: "\\"
+
+# 2nd row
+- key: "CAPS LOCK"
+- key: "A"
+- key: "S"
+- key: "D"
+- key: "F"
+- key: "G"
+- key: "H"
+- key: "J"
+- key: "K"
+- key: "L"
+- key: ";"
+- key: "'"
+- key: "ENTER"
+
+# 3rd row
+- key: "SHIFT"
+- key: "Z"
+- key: "X"
+- key: "C"
+- key: "V"
+- key: "B"
+- key: "N"
+- key: "M"
+- key: ","
+- key: "."
+- key: "/"
+
+# Bottom row
+- key: "CTRL"
+  color: "blue"
+- key: "ALT"
+  color: "red"
+- key: "SPACE"
+
+# Extra
+- key: "UP"
+- key: "DOWN"
+- key: "LEFT"
+- key: "RIGHT"
+- key: "PAGE UP"
+- key: "PAGE DOWN"
+- key: "HOME"
+- key: "END"
+- key: "INSERT"
+- key: "DELETE"
