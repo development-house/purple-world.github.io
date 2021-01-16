@@ -1,0 +1,41 @@
+@import "../../styles/fluid.scss";
+@import "../../styles/typography.scss";
+
+/* Keybindings page */
+.keybindings {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    @include fluid(margin-bottom, 30, 40);
+
+    .group {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        @include fluid(margin-right, 16, 20);
+  
+        img {
+          @include fluid(height, 40, 80);
+        }
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+  
+        h1 {
+          @include fluid(font-size, 24, 32);
+        }
+
+        span {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include fluid(margin-top, 30, 40);
+  }
+}

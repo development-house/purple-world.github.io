@@ -1,0 +1,82 @@
+@import "../../styles/colors.scss";
+@import "../../styles/transitions.scss";
+@import "../../styles/typography.scss";
+
+/* Key */
+$max-width-count: 24;
+
+.key {
+  grid-row: 1/2;
+  margin: 0.6rem;
+
+  @for $i from 0 through $max-width-count {
+    &[data-width="#{$i}"] {
+      grid-column: auto / span #{$i}
+    }
+  }
+
+  // @NOTE: I wish this was a thing
+  // &[data-width] {
+  //   grid-column: auto / span attr(data-width);
+  // }
+
+  .inner {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    color: $color-text-primary;
+    border: 1px solid $color-text-primary;
+    border-radius: 3px;
+    opacity: 0.8;
+    @include transition(opacity, background);
+    cursor: pointer;
+
+    .label {
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      line-height: 1;
+      padding: 0.2rem 0.4rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.2rem 0.4rem;
+      overflow: hidden;
+
+      .item {
+        display: flex;
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        .tags {
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+
+    &:hover {
+      background: $color-background-highlight;
+      opacity: 1 !important;
+    }
+  }
+
+  &.spacer {
+    .inner {
+      display: none;
+    }
+  }
+
+  &.unassigned {
+    .inner {
+      opacity: 0.3;
+    }
+  }
+}

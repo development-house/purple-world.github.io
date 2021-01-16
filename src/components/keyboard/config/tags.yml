@@ -1,9 +1,20 @@
 # ------------------------------------------------------------------------
 # KEYBINDINGS PAGE TAGS
 # ------------------------------------------------------------------------
-# Available tag definitions (read-only)
+# tag: tag name (string)
+# - label: tag title (string)
+# - default: display by default (boolean)
+# - color: tag color (string)
 # ------------------------------------------------------------------------
 
 - tag: "general"
+  label: "General"
+  default: true
 - tag: "vehicle"
+  label: "Vehicle"
+  default: true
+  color: "red"
 - tag: "job"
+  label: "Job"
+  default: true
+  color: "blue"

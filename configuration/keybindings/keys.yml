@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------
 # KEYBINDINGS PAGE KEYS
 # ------------------------------------------------------------------------
-# Available key definitions
+# Available key definitions (read-only)
 # ------------------------------------------------------------------------
 
 # F row
@@ -81,9 +81,7 @@
 
 # Bottom row
 - key: "CTRL"
-  color: "blue"
 - key: "ALT"
-  color: "red"
 - key: "SPACE"
 
 # Extra
