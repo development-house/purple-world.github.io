@@ -9,7 +9,7 @@
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
-  background: $color-background-secondary;
+  background: $color-background-highlight;
   overflow: hidden;
   cursor: pointer;
   @include fluid("padding-top", 10, 20);
@@ -34,8 +34,8 @@
 
     span,
     svg {
-      color: $color-text-secondary;
-      fill: $color-text-secondary;
+      color: $color-text-primary-hover;
+      fill: $color-text-primary-hover;
     }
   }
 
@@ -57,7 +57,7 @@
     }
 
     &:hover {
-      background: $color-background-secondary;
+      background: $color-background-highlight;
 
       span,
       svg {

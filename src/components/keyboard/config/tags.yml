@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------
+# KEYBINDINGS PAGE TAGS
+# ------------------------------------------------------------------------
+# tag: tag name (string)
+# - label: tag title (string)
+# - default: display by default (boolean)
+# - color: tag color (string)
+# ------------------------------------------------------------------------
+
+- tag: "general"
+  label: "General"
+  default: true
+- tag: "vehicle"
+  label: "Vehicle"
+  default: true
+  color: "#9e8bf9"
+- tag: "jobs"
+  label: "Jobs"
+  default: true
+  color: "#f48383"

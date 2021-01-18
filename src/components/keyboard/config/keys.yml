@@ -1,0 +1,213 @@
+# ------------------------------------------------------------------------
+# KEYBOARD KEYS
+# ------------------------------------------------------------------------
+# row: order (number)
+# - keys:
+#     - key: key label (string)
+#     - code: key code (number)
+#     - width: key columns width (number)
+# ------------------------------------------------------------------------
+
+# F row
+- row: 1
+  keys:
+  - key: "ESC"
+    width: 4
+  - key: "__spacer"
+    width: 3
+  - key: "F1"
+    width: 4
+  - key: "F2"
+    width: 4
+  - key: "F3"
+    width: 4
+  - key: "F4"
+    width: 4
+  - key: "__spacer"
+    width: 2
+  - key: "F5"
+    width: 4
+  - key: "F6"
+    width: 4
+  - key: "F7"
+    width: 4
+  - key: "F8"
+    width: 4
+  - key: "__spacer"
+    width: 2
+  - key: "F9"
+    width: 4
+  - key: "F10"
+    width: 4
+  - key: "F11"
+    width: 4
+  - key: "F12"
+    width: 4
+
+# Num row
+- row: 2
+  keys:
+  - key: "`"
+    width: 4
+  - key: "1"
+    width: 4
+  - key: "2"
+    width: 4
+  - key: "3"
+    width: 4
+  - key: "4"
+    width: 4
+  - key: "5"
+    width: 4
+  - key: "6"
+    width: 4
+  - key: "7"
+    width: 4
+  - key: "8"
+    width: 4
+  - key: "9"
+    width: 4
+  - key: "0"
+    width: 4
+  - key: "-"
+    width: 4
+  - key: "="
+    width: 4
+  - key: "BACKSPACE"
+    width: 7
+  - key: "__spacer"
+    width: 2
+  - key: "INSERT"
+    width: 4
+  - key: "HOME"
+    width: 4
+  - key: "PAGE UP"
+    width: 4
+
+# 1st row
+- row: 3
+  keys:
+  - key: "TAB"
+    width: 6
+  - key: "Q"
+    width: 4
+  - key: "W"
+    width: 4
+  - key: "E"
+    width: 4
+  - key: "R"
+    width: 4
+  - key: "T"
+    width: 4
+  - key: "Y"
+    width: 4
+  - key: "U"
+    width: 4
+  - key: "I"
+    width: 4
+  - key: "O"
+    width: 4
+  - key: "P"
+    width: 4
+  - key: "["
+    width: 4
+  - key: "]"
+    width: 4
+  - key: "\\"
+    width: 5
+  - key: "__spacer"
+    width: 2
+  - key: "DELETE"
+    width: 4
+  - key: "END"
+    width: 4
+  - key: "PAGE DOWN"
+    width: 4
+
+# 2nd row
+- row: 4
+  keys:
+  - key: "CAPS LOCK"
+    width: 7
+  - key: "A"
+    width: 4
+  - key: "S"
+    width: 4
+  - key: "D"
+    width: 4
+  - key: "F"
+    width: 4
+  - key: "G"
+    width: 4
+  - key: "H"
+    width: 4
+  - key: "J"
+    width: 4
+  - key: "K"
+    width: 4
+  - key: "L"
+    width: 4
+  - key: ";"
+    width: 4
+  - key: "'"
+    width: 4
+  - key: "ENTER"
+    width: 8
+
+# 3rd row
+- row: 5
+  keys:
+  - key: "SHIFT"
+    width: 9
+  - key: "Z"
+    width: 4
+  - key: "X"
+    width: 4
+  - key: "C"
+    width: 4
+  - key: "V"
+    width: 4
+  - key: "B"
+    width: 4
+  - key: "N"
+    width: 4
+  - key: "M"
+    width: 4
+  - key: ","
+    width: 4
+  - key: "."
+    width: 4
+  - key: "/"
+    width: 4
+  - key: "SHIFT"
+    width: 10
+  - key: "__spacer"
+    width: 6
+  - key: "UP"
+    width: 4
+
+# Bottom row
+- row: 6
+  keys:
+  - key: "CTRL"
+    width: 6
+  - key: "__spacer"
+    width: 6
+  - key: "ALT"
+    width: 6
+  - key: "SPACE"
+    width: 23
+  - key: "ALT"
+    width: 6
+  - key: "__spacer"
+    width: 6
+  - key: "CTRL"
+    width: 6
+  - key: "__spacer"
+    width: 2
+  - key: "LEFT"
+    width: 4
+  - key: "DOWN"
+    width: 4
+  - key: "RIGHT"
+    width: 4
