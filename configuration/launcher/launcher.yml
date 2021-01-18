@@ -9,5 +9,6 @@
 
 owner: "purple-world"
 repository: "launcher"
-filename: "Purple-World-Launcher-Setup"
-extension: "exe"
+# filename: "Purple-World-Launcher-Setup" # for "exe" extension
+filename: "Purple-World-Launcher" # for "msi" extension
+extension: "msi"
