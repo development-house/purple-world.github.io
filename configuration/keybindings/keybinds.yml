@@ -8,16 +8,16 @@
 
 - keys: ["W"]
   desc: "Movement"
-  tags: ["general, vehicle"]
+  tags: ["general", "vehicle"]
 - keys: ["A"]
   desc: "Movement"
-  tags: ["general, vehicle"]
+  tags: ["general", "vehicle"]
 - keys: ["S"]
   desc: "Movement"
-  tags: ["general, vehicle"]
+  tags: ["general", "vehicle"]
 - keys: ["D"]
   desc: "Movement"
-  tags: ["general, vehicle"]
+  tags: ["general", "vehicle"]
 - keys: ["CTRL"]
   desc: "Crouch"
   tags: ["general"]
@@ -65,10 +65,10 @@
   tags: ["general"]
 - keys: ["F5"]
   desc: "Command job menu"
-  tags: ["job"]
+  tags: ["jobs"]
 - keys: ["F6"]
   desc: "Job menu"
-  tags: ["job"]
+  tags: ["jobs"]
 - keys: ["F7"]
   desc: "Bills menu"
   tags: ["general"]

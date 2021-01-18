@@ -13,8 +13,8 @@
 - tag: "vehicle"
   label: "Vehicle"
   default: true
-  color: "red"
-- tag: "job"
-  label: "Job"
+  color: "#9e8bf9"
+- tag: "jobs"
+  label: "Jobs"
   default: true
-  color: "blue"
+  color: "#f48383"

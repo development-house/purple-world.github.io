@@ -10,7 +10,7 @@ import style from './Keybindings.module.scss'
 
 const KeybindingsPage = () => {
   const [key, setKey] = useState(null)
-  const [tags, setTags] = useState(['general', 'vehicle', 'job'])
+  const [activeTags, setActiveTags] = useState(['general', 'vehicle', 'jobs'])
 
   return (
     <Layout title="Keybindings">
@@ -24,10 +24,10 @@ const KeybindingsPage = () => {
             </div>
           </div>
         </div>
-        <Keyboard keyEvent={setKey} />
+        <Keyboard keyEvent={setKey} activeTags={activeTags} />
         <div className={style.footer}>
           <KeyboardDetail currentKey={key} />
-          <KeyboardOptions tags={tags} tagsEvent={setTags} />
+          <KeyboardOptions activeTags={activeTags} tagsEvent={setActiveTags} />
         </div>
       </div>
     </Layout>

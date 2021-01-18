@@ -1,8 +1,9 @@
 import React from 'react'
 import {nanoid} from 'nanoid'
 
-import style from './KeyboardDetail.module.scss'
+import tagsConfig from '../keyboard/config/tags.yml'
 
+import style from './KeyboardDetail.module.scss'
 import keyStyle from '../keyboard/Key.module.scss'
 
 const KeyboardDetail = ({currentKey}) => {
@@ -18,6 +19,7 @@ const KeyboardDetail = ({currentKey}) => {
               <div
                 key={nanoid()}
                 className={`${style.action_item} ${keyStyle.item}`}
+                style={{color: tagsConfig.find(t => t.tag === keybind.tags[0])?.color}}
               >
                 <div className={keyStyle.tags}>
                   {keybind.modifier && (

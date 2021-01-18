@@ -1,15 +1,49 @@
-import React from 'react'
+import React, {memo, useState} from 'react'
+import SVG from 'react-inlinesvg'
+
+import Button from '../button/Button'
+
+import toggleArrayItem from '../../util/helpers/toggleArrayItem'
 
 import tagsData from '../keyboard/config/tags.yml'
 
-// import style from './KeyboardOptions.module.scss'
+import style from './KeyboardOptions.module.scss'
 
-const KeyboardOptions = ({tags, tagsEvent}) => {
-  // const
+const KeyboardOptions = memo(({activeTags, tagsEvent}) => {
+  const [open, setOpen] = useState(false)
+
+  const handleOptionSelect = (itemTag) => {
+    const updatedTags = toggleArrayItem(activeTags, itemTag)
+    tagsEvent(updatedTags)
+  }
 
   return (
-    <p>KeyboardOptions</p>
+    <div className={style.options}>
+      <div className={`${style.select} ${open ? style.active : ''}`}>
+        <Button
+          className={style.button}
+          onClick={() => setOpen(!open)}
+          primary
+        >
+          <span>Select filters</span>
+        </Button>
+        {tagsData && tagsData.length && (
+          <div className={style.options}>
+            {tagsData.map(option => (
+              <Button
+                key={option.tag}
+                className={style.option}
+                onClick={() => handleOptionSelect(option.tag)}
+              >
+                <SVG src={`/icons/${activeTags.includes(option.tag) ? 'checkmark' : 'crossmark'}.svg`} />
+                <span style={{color: option.color ? option.color : 'inherit'}}>{option.label}</span>
+              </Button>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   )
-}
+})
 
 export default KeyboardOptions

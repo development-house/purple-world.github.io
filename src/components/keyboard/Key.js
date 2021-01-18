@@ -3,14 +3,21 @@ import {nanoid} from 'nanoid'
 
 import style from './Key.module.scss'
 
-const Key = ({width, isSpacer, label, keybinds, keyEvent}) => {
+const Key = ({width, isSpacer, label, keybinds, keyEvent, activeTags, tagsConfig}) => {
   const onKeyEvent = (keyObject) => {
     keyEvent(keyObject)
   }
 
+  let filteredKeybinds = []
+  keybinds && keybinds.forEach(keybind => {
+    if (activeTags.some(tag => keybind.tags.indexOf(tag) >= 0)) {
+      filteredKeybinds.push(keybind)
+    }
+  })
+
   return (
     <div
-      className={`${style.key} ${isSpacer ? style.spacer : ''} ${!keybinds ? style.unassigned : ''}`}
+      className={`${style.key} ${isSpacer ? style.spacer : ''} ${!filteredKeybinds.length ? style.unassigned : ''}`}
       data-width={width}
     >
       <div
@@ -22,22 +29,25 @@ const Key = ({width, isSpacer, label, keybinds, keyEvent}) => {
           <span>{label}</span>
         </div>
         <div className={style.actions}>
-          {keybinds && keybinds.slice(0, 2).map(keybind => (
-            <div
-              key={nanoid()}
-              className={style.item}
-            >
-              <div className={style.tags}>
-                {keybind.modifier && (
-                  <span>{keybind.modifier}+</span>
-                )}
+          {filteredKeybinds.length > 0 && filteredKeybinds.slice(0, 2)
+            .map(keybind => (
+              <div
+                key={nanoid()}
+                className={style.item}
+                style={{color: tagsConfig.find(t => t.tag === keybind.tags[0])?.color}}
+              >
+                <div className={style.tags}>
+                  {keybind.modifier && (
+                    <span>{keybind.modifier}+</span>
+                  )}
+                </div>
+                <span>{keybind.desc}</span>
               </div>
-              <span>{keybind.desc}</span>
-            </div>
-          ))}
-          {keybinds && keybinds.length > 2 && (
+            ))
+          }
+          {filteredKeybinds.length > 2 && (
             <div className={style.item}>
-              <span>+{keybinds.length - 2} more</span>
+              <span>+{filteredKeybinds.length - 2} more</span>
             </div>
           )}
         </div>

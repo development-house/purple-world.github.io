@@ -6,11 +6,12 @@ import Key from './Key'
 import parseKeybindsData from './helpers/parseKeybindsData'
 
 import keysConfig from './config/keys.yml'
+import tagsConfig from './config/tags.yml'
 import keybindsData from '../../../configuration/keybindings/keybinds.yml'
 
 import style from './Keyboard.module.scss'
 
-const Keyboard = memo(({keyEvent}) => {
+const Keyboard = memo(({keyEvent, activeTags}) => {
   const keymap = parseKeybindsData(keybindsData)
 
   return (
@@ -25,6 +26,8 @@ const Keyboard = memo(({keyEvent}) => {
               label={key}
               keybinds={keymap[key]}
               keyEvent={keyEvent}
+              activeTags={activeTags}
+              tagsConfig={tagsConfig}
             />
           ))}
         </div>

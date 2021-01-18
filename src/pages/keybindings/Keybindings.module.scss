@@ -36,6 +36,9 @@
   }
 
   .footer {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
     @include fluid(margin-top, 30, 40);
+    @include fluid(margin-bottom, 30, 40);
   }
 }
