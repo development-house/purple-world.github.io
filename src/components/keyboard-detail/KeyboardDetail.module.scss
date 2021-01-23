@@ -1,3 +1,4 @@
+@import "../../styles/breakpoints.scss";
 @import "../../styles/colors.scss";
 @import "../../styles/fluid.scss";
 
@@ -6,28 +7,36 @@
 /* Keyboard detail */
 .detail {
   display: block;
-  padding: 0 2rem;
 
-  .key {
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+
+  .row {
+    min-height: $row-height;
     height: 100%;
-
-    .inner {
+    
+    .key {
       height: 100%;
-      min-height: $row-height;
-      opacity: 0.3;
-      cursor: default;
+      margin: 0.6rem;
   
-      &:hover {
-        opacity: 0.3 !important;
-        background: inherit;
-      }
-
-      &.active {
-        opacity: 1;
-      }
-
-      .action_item {
-        font-size: 1.6rem;
+      .inner {
+        height: 100%;
+        opacity: 0.3;
+        cursor: default;
+    
+        &:hover {
+          opacity: 0.3 !important;
+          background: inherit;
+        }
+  
+        &.active {
+          opacity: 1;
+        }
+  
+        .action_item {
+          font-size: 1.6rem;
+        }
       }
     }
   }

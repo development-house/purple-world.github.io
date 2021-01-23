@@ -87,9 +87,6 @@
 - keys: ["ALT", "W"]
   desc: "Cruise control"
   tags: ["vehicle"]
-
-
-# @DEBUG:
-- keys: ["CTRL", "W"]
-  desc: "Test"
-  tags: ["vehicle"]
+- keys: ["ALT", "UP"]
+  desc: "Panic button"
+  tags: ["jobs"]
