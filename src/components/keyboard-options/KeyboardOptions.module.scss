@@ -3,6 +3,8 @@
 
 /* Keyboard opions */
 .options {
+  margin: 0.6rem 0;
+
   .select {
     position: relative;
     display: inline-flex;
@@ -25,6 +27,11 @@
           fill: $color-text-primary;
         }
       }
+    }
+
+    &> div:last-of-type {
+      position: absolute;
+      width: 100%;
     }
 
     .options {

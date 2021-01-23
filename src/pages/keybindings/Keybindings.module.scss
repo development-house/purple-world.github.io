@@ -1,3 +1,4 @@
+@import "../../styles/breakpoints.scss";
 @import "../../styles/fluid.scss";
 @import "../../styles/typography.scss";
 
@@ -12,11 +13,20 @@
       display: flex;
       align-items: center;
 
+      @include breakpoint(tablet) {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
       .logo {
         @include fluid(margin-right, 16, 20);
   
         img {
-          @include fluid(height, 40, 80);
+          @include fluid(height, 60, 80);
+        }
+
+        @include breakpoint(tablet) {
+          margin-bottom: 1rem;
         }
       }
 
@@ -37,8 +47,15 @@
 
   .footer {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr auto;
+    column-gap: 2rem;
     @include fluid(margin-top, 30, 40);
     @include fluid(margin-bottom, 30, 40);
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 2rem;
+    }
   }
 }
