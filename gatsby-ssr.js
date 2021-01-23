@@ -1,5 +1,5 @@
 exports.onRenderBody = ({setBodyAttributes}) => {
   setBodyAttributes({
-    className: 'no-js'
+    className: 'no_js preloader_active'
   })
 }

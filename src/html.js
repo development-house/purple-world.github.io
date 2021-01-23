@@ -6,7 +6,7 @@ import logoImage from '../static/images/logo/logo.png'
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html {...props.htmlAttributes} style={{backgroundColor: "#27135c"}}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -17,11 +17,7 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
-        <div
-          id="preloader"
-          className="preloader"
-        >
-
+        <div id="preloader">
           <img src={logoImage} alt="logo" style={{"height": "calc(3.23625vw + 77.86408px)"}} />
           <div className="preloader_animation"></div>
         </div>

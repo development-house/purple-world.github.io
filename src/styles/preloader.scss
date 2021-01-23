@@ -2,71 +2,164 @@
 @import "./fluid.scss";
 
 /* Preloader */
-.preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  background: $color-background-primary;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body {
+  #preloader {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: -10%;
+    right: -10%;
+    height: 0;
+    margin-left: calc(100vw - 100%);
+    overflow-x: hidden;
 
-  svg {
-    height: 30px;
-  }
+    svg {
+      height: 3rem;
+    }
 
-  img {
-    z-index: 120;
-  }
+    img {
+      z-index: 120;
+    }
 
-  .preloader_animation {
-    position: absolute;
-    @include fluid(width, 90, 140);
-    @include fluid(height, 90, 140);
-    border: 5px solid $color-text-primary;
-    border-radius: 50%;
-    opacity: 0; 
-    z-index: 110;
-    animation: preloaderAnimation 1.5s ease-out infinite 0s;
+    .preloader_animation {
+      position: absolute;
+      @include fluid(width, 90, 140);
+      @include fluid(height, 90, 140);
+      border: 5px solid $color-text-primary;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 110;
+      animation: preloaderAnimation 1.5s ease-out infinite 0s;
 
-    @keyframes preloaderAnimation {
-      0% {
-        transform: scale(.1);
-        opacity: 0.0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1.2);
-        opacity: 0;
+      @keyframes preloaderAnimation {
+        0% {
+          transform: scale(.1);
+          opacity: 0.0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.2);
+          opacity: 0;
+        }
       }
     }
   }
 
-  &.preloader_inactive {
-    animation: preloaderInactive 1.5s forwards 1.5s;
+  &.preloader_active {
+    height: 100vh;
+    overflow-y: hidden;
 
-    @keyframes preloaderInactive {
-      0% {
-        opacity: 1;
+    #preloader {
+      height: auto;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-background-primary;
+      z-index: 9999;
+      display: flex;
+      overflow: hidden;
+    }
+  }
+
+  &.preloader_scroll {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  &.preloader_ready {
+    #preloader {
+      animation: preloaderLeaving 0.5s forwards 0.5s;
+
+      @keyframes preloaderLeaving {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
-      100% {
-        opacity: 0;
-        pointer-events: none;
-        z-index: -100;
-      }
+    }
+  }
+
+  &.no_js {
+    height: auto;
+    overflow-y: auto;
+
+    #preloader {
+      display: none;
     }
   }
 }
 
-.no-js {
-  .preloader {
-    animation: preloaderInactive 1s forwards 1s;
-  }
-}
+// .preloader {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 100;
+//   background: $color-background-primary;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+
+//   svg {
+//     height: 30px;
+//   }
+
+//   img {
+//     z-index: 120;
+//   }
+
+//   .preloader_animation {
+//     position: absolute;
+//     @include fluid(width, 90, 140);
+//     @include fluid(height, 90, 140);
+//     border: 5px solid $color-text-primary;
+//     border-radius: 50%;
+//     opacity: 0; 
+//     z-index: 110;
+//     animation: preloaderAnimation 1.5s ease-out infinite 0s;
+
+//     @keyframes preloaderAnimation {
+//       0% {
+//         transform: scale(.1);
+//         opacity: 0.0;
+//       }
+//       50% {
+//         opacity: 1;
+//       }
+//       100% {
+//         transform: scale(1.2);
+//         opacity: 0;
+//       }
+//     }
+//   }
+
+//   &.preloader_inactive {
+//     animation: preloaderInactive 1.5s forwards 1.5s;
+
+//     @keyframes preloaderInactive {
+//       0% {
+//         opacity: 1;
+//       }
+//       100% {
+//         opacity: 0;
+//         pointer-events: none;
+//         z-index: -100;
+//       }
+//     }
+//   }
+// }
+
+// .no-js {
+//   .preloader {
+//     animation: preloaderInactive 1s forwards 1s;
+//   }
+// }
 
