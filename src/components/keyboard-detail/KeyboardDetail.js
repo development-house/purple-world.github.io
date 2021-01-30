@@ -1,12 +1,24 @@
 import React from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
+import YAML from 'yaml'
 import {nanoid} from 'nanoid'
-
-import tagsConfig from '../keyboard/config/tags.yml'
 
 import style from './KeyboardDetail.module.scss'
 import keyStyle from '../keyboard/Key.module.scss'
 
 const KeyboardDetail = ({currentKey}) => {
+  const tagsData = YAML.parse(useStaticQuery(
+    graphql`
+      query {
+        allKeybindings {
+          nodes {
+            tags
+          }
+        }
+      }
+    `
+  ).allKeybindings?.nodes[0]?.tags)
+
   return (
     <div className={style.detail}>
       <div className={style.row}>
@@ -20,7 +32,7 @@ const KeyboardDetail = ({currentKey}) => {
                 <div
                   key={nanoid()}
                   className={`${style.action_item} ${keyStyle.item}`}
-                  style={{color: tagsConfig.find(t => t.tag === keybind.tags[0])?.color}}
+                  style={{color: tagsData.find(t => t.tag === keybind.tags[0])?.color}}
                 >
                   <div className={keyStyle.tags}>
                     {keybind.modifier && (

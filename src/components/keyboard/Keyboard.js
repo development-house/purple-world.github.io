@@ -1,4 +1,6 @@
 import React, {memo} from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
+import YAML from 'yaml'
 import {nanoid} from 'nanoid'
 
 import Key from './Key'
@@ -6,13 +8,24 @@ import Key from './Key'
 import parseKeybindsData from './helpers/parseKeybindsData'
 
 import keysConfig from './config/keys.yml'
-import tagsConfig from './config/tags.yml'
-import keybindsData from '../../../configuration/keybindings/keybinds.yml'
 
 import style from './Keyboard.module.scss'
 
 const Keyboard = memo(({keyEvent, activeTags}) => {
-  const keymap = parseKeybindsData(keybindsData)
+  const keybindingsData = useStaticQuery(
+    graphql`
+      query {
+        allKeybindings {
+          nodes {
+            keybinds
+            tags
+          }
+        }
+      }
+    `
+  ).allKeybindings?.nodes[0]
+
+  const keymap = parseKeybindsData(YAML.parse(keybindingsData.keybinds))
 
   return (
     <div className={style.keyboard}>
@@ -27,7 +40,7 @@ const Keyboard = memo(({keyEvent, activeTags}) => {
               keybinds={keymap[key]}
               keyEvent={keyEvent}
               activeTags={activeTags}
-              tagsConfig={tagsConfig}
+              tagsConfig={YAML.parse(keybindingsData.tags)}
             />
           ))}
         </div>

@@ -1,4 +1,6 @@
 import React, {memo, useState} from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
+import YAML from 'yaml'
 import SVG from 'react-inlinesvg'
 import OutsideClickHandler from 'react-outside-click-handler'
 
@@ -6,11 +8,21 @@ import Button from '../button/Button'
 
 import toggleArrayItem from '../../util/helpers/toggleArrayItem'
 
-import tagsData from '../keyboard/config/tags.yml'
-
 import style from './KeyboardOptions.module.scss'
 
 const KeyboardOptions = memo(({activeTags, tagsEvent}) => {
+  const tagsData = YAML.parse(useStaticQuery(
+    graphql`
+      query {
+        allKeybindings {
+          nodes {
+            tags
+          }
+        }
+      }
+    `
+  ).allKeybindings?.nodes[0]?.tags)
+
   const [open, setOpen] = useState(false)
 
   const handleOptionSelect = (itemTag) => {

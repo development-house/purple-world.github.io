@@ -9,7 +9,7 @@ import KeyboardOptions from '../../components/keyboard-options/KeyboardOptions'
 import style from './Keybindings.module.scss'
 
 const KeybindingsPage = () => {
-  const [key, setKey] = useState(null)
+  const [activeKey, setActiveKey] = useState(null)
   const [activeTags, setActiveTags] = useState(['general', 'vehicle', 'jobs'])
 
   return (
@@ -24,9 +24,9 @@ const KeybindingsPage = () => {
             </div>
           </div>
         </div>
-        <Keyboard keyEvent={setKey} activeTags={activeTags} />
+        <Keyboard keyEvent={setActiveKey} activeTags={activeTags} />
         <div className={style.footer}>
-          <KeyboardDetail currentKey={key} />
+          <KeyboardDetail currentKey={activeKey} />
           <KeyboardOptions activeTags={activeTags} tagsEvent={setActiveTags} />
         </div>
       </div>
