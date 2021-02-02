@@ -6,7 +6,7 @@ import logoImage from '../static/images/logo/logo.png'
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes} style={{backgroundColor: "#27135c"}}>
+    <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +28,8 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{__html: props.body}}
         />
         {props.postBodyComponents}
-        <script src="./scripts/no-js.js"></script>
+        <script src="/scripts/preloader.js"></script>
+        <script src="/scripts/no-js.js"></script>
       </body>
     </html>
   )
