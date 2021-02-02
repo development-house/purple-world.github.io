@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import {useStaticQuery, graphql} from 'gatsby'
@@ -6,11 +6,7 @@ import {useStaticQuery, graphql} from 'gatsby'
 import colors from '../../styles/colors.scss'
 
 const Head = ({title}) => {
-  const metaVersion = "s60ylnjhk7"
-
-  useEffect(() => {
-    document.getElementById('preloader').classList.add('preloader_inactive')
-  }, [])
+  const metaVersion = 's60ylnjhk7'
 
   const {site} = useStaticQuery(
     graphql`
@@ -31,7 +27,7 @@ const Head = ({title}) => {
   return (
     <Helmet>
       <html lang="en" />
-      <title>{`${title ? `${title} - ` : ""}Purple World`}</title>
+      <title>{`${title ? `${title} - ` : ''}Purple World`}</title>
       <meta httpEquiv="Content-Type" content="text/html" />
       <meta name="description" content={site.siteMetadata.description} />
       <meta name="author" content={site.siteMetadata.author} />
