@@ -7,8 +7,10 @@ exports.onRenderBody = ({
   setPostBodyComponents
 }) => {
   setHeadComponents([
-    <link as="script" rel="preload" href="/scripts/no-js.js" />,
-    <link as="script" rel="preload" href="/scripts/preloader.js" />
+    <link as="script" rel="preload" href="/scripts/preloader.js" />,
+    <noscript>
+      <link rel="stylesheet" href="/styles/noscript.css" />
+    </noscript>
   ])
   setPreBodyComponents([
     <div id="preloader">
@@ -17,10 +19,9 @@ exports.onRenderBody = ({
     </div>
   ])
   setBodyAttributes({
-    className: 'no_js preloader_active'
+    className: 'preloader_active'
   })
   setPostBodyComponents([
-    <script src="/scripts/no-js.js" />,
     <script src="/scripts/preloader.js" />
   ])
 }
