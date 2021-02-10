@@ -1,4 +1,4 @@
-name: Github Pages webhook deploy
+name: deploy-webhook
 
 on: workflow_dispatch
 
