@@ -1,5 +1,5 @@
 const parseKeybindsData = (keybindsData) => {
-  const modifiers = ['CTRL', 'ALT']
+  const modifiers = ['CTRL', 'ALT', 'SHIFT']
 
   let keymap = {}
 
