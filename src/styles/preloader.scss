@@ -65,14 +65,12 @@ body {
     }
   }
 
-  &.preloader_scroll {
+  &.preloader_ready {
     height: auto;
     overflow-y: auto;
-  }
 
-  &.preloader_ready {
     #preloader {
-      animation: preloaderLeaving 0.5s forwards 0.5s;
+      animation: preloaderLeaving 0.5s forwards;
 
       @keyframes preloaderLeaving {
         0% {
