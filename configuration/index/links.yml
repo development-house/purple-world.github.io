@@ -12,8 +12,12 @@
 - link: "launcher"
   priority: 1
   to: "/launcher"
-  text: "Download launcher"
-- link: "forums"
+  text: "Launcher"
+# - link: "forums"
+#   priority: 2
+#   href: "https://purpleworld.net"
+#   text: "Forums"
+- link: "keybindings"
   priority: 2
-  href: "https://purpleworld.net"
-  text: "Forums"
+  to: "/keybindings"
+  text: "Keybindings"

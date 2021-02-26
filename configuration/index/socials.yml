@@ -7,19 +7,23 @@
 # - icon: file name (string; located in "/static/icons" folder)
 # ------------------------------------------------------------------------
 
-- social: "discord"
+- social: "forums"
   priority: 1
+  href: "https://purpleworld.net"
+  icon: "forums.svg"
+- social: "discord"
+  priority: 2
   href: "https://discord.gg/xTSA32P"
   icon: "discord.svg"
 - social: "reddit"
-  priority: 2
+  priority: 3
   href: "https://www.reddit.com/r/PurpleWorld"
   icon: "reddit.svg"
 - social: "twitter"
-  priority: 3
+  priority: 4
   href: "https://twitter.com/PurpleWorldRP"
   icon: "twitter.svg"
 - social: "patreon"
-  priority: 4
+  priority: 5
   href: "https://www.patreon.com/purpleworld"
   icon: "patreon.svg"
