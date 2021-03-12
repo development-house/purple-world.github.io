@@ -8,7 +8,7 @@ const searchItems = (commandsList, searchValue) => {
 
   commandsList.length && commandsList.forEach(item => {
     const {command, desc, keywords} = item
-    const keywordsString = keywords.join(', ')
+    const keywordsString = keywords ? keywords.join(',') : ''
 
     if (
       regexp.test(command)
