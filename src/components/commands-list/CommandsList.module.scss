@@ -1,0 +1,55 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+
+/* Commands list */
+.list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 30rem;
+  background: $color-background-secondary;
+
+  .container {
+    @include fluid("padding-top", 8, 10);
+    @include fluid("padding-right", 8, 12);
+    @include fluid("padding-bottom", 8, 10);
+    @include fluid("padding-left", 8, 12);
+    overflow-y: auto;
+    
+    .items {
+      li {
+        display: flex;
+        flex-direction: column;
+        @include fluid("padding-top", 3, 6);
+        @include fluid("padding-bottom", 3, 6);
+        border-bottom: 1px solid rgba($color-text-primary, 0.1);
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+
+        span {
+          @include fluid(font-size, 16, 20);
+        }
+
+        p {
+          color: $color-text-tertiary;
+        }
+      }
+    }
+
+    .empty {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      span {
+        @include fluid(font-size, 16, 20);
+        color: $color-text-secondary;
+        @include fluid("margin-top", 16, 20);
+      }
+    }
+  }
+}

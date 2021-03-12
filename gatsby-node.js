@@ -15,7 +15,7 @@ exports.sourceNodes = async ({actions, createNodeId, createContentDigest}) => {
     try {
       const res = await axios({
         method: 'GET',
-        url: `https://${GITLAB_URL}/api/v4/projects/${GITLAB_PROJECT_ID}/repository/files/keybinds.yml/raw?ref=master&private_token=${GITLAB_ACCESS_TOKEN}`
+        url: `https://${GITLAB_URL}/api/v4/projects/${GITLAB_PROJECT_ID}/repository/files/keybindings%2Fkeybinds.yml/raw?ref=master&private_token=${GITLAB_ACCESS_TOKEN}`
       })
 
       if (res.data) {
@@ -28,7 +28,7 @@ exports.sourceNodes = async ({actions, createNodeId, createContentDigest}) => {
     try {
       const res = await axios({
         method: 'GET',
-        url: `https://${GITLAB_URL}/api/v4/projects/${GITLAB_PROJECT_ID}/repository/files/tags.yml/raw?ref=master&private_token=${GITLAB_ACCESS_TOKEN}`
+        url: `https://${GITLAB_URL}/api/v4/projects/${GITLAB_PROJECT_ID}/repository/files/keybindings%2Ftags.yml/raw?ref=master&private_token=${GITLAB_ACCESS_TOKEN}`
       })
 
       if (res.data) {
@@ -56,5 +56,42 @@ exports.sourceNodes = async ({actions, createNodeId, createContentDigest}) => {
     createNode(node)
   }
 
-  return getKeybindingsConfig()
+  const getCommandsConfig = async () => {
+    const nodeData = {
+      commands: null
+    }
+
+    try {
+      const res = await axios({
+        method: 'GET',
+        url: `https://${GITLAB_URL}/api/v4/projects/${GITLAB_PROJECT_ID}/repository/files/commands%2Fcommands.yml/raw?ref=master&private_token=${GITLAB_ACCESS_TOKEN}`
+      })
+
+      if (res.data) {
+        nodeData.commands = res.data
+      }
+    } catch (err) {
+      console.log('[gatsby-node] getCommandsConfig - error: ', err)
+    }
+
+    const nodeContent = JSON.stringify(nodeData)
+
+    const nodeMeta = {
+      id: createNodeId('commands'),
+      parent: null,
+      children: [],
+      internal: {
+        type: 'commands',
+        mediaType: 'text/html',
+        content: nodeContent,
+        contentDigest: createContentDigest(nodeContent)
+      }
+    }
+
+    const node = {...nodeData, ...nodeMeta}
+    createNode(node)
+  }
+
+  await getKeybindingsConfig()
+  await getCommandsConfig()
 }

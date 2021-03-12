@@ -21,3 +21,8 @@
   priority: 2
   to: "/keybindings"
   text: "Keybindings"
+- link: "commands"
+  priority: 3
+  to: "/commands"
+  text: "Commands"
+

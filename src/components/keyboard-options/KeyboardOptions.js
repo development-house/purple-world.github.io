@@ -13,7 +13,7 @@ import style from './KeyboardOptions.module.scss'
 const KeyboardOptions = memo(({activeTags, tagsEvent}) => {
   const tagsData = YAML.parse(useStaticQuery(
     graphql`
-      query {
+      query KeyboardOptions {
         allKeybindings {
           nodes {
             tags

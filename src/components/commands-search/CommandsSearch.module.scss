@@ -1,0 +1,38 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/typography.scss";
+
+/* Commands search */
+.search {
+  background: $color-background-secondary;
+  @include fluid("margin-bottom", 10, 16);
+
+  .container {
+    display: flex;
+    align-items: center;
+    @include fluid("padding-top", 5, 10);
+    @include fluid("padding-right", 10, 15);
+    @include fluid("padding-bottom", 5, 10);
+    @include fluid("padding-left", 10, 15);
+
+    input {
+      @include font-type-base;
+      @include fluid(font-size, 14, 18);
+      color: $color-text-primary;
+      background: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+
+    .reset {
+      @include fluid(font-size, 16, 20);
+      @include fluid("padding-top", 8, 10);
+      @include fluid("padding-right", 8, 12);
+      @include fluid("padding-bottom", 8, 10);
+      @include fluid("padding-left", 8, 12);
+      opacity: 0.66;
+      cursor: pointer;
+    }
+  }
+}

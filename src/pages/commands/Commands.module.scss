@@ -1,0 +1,51 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/fluid.scss";
+@import "../../styles/typography.scss";
+
+/* Commands page */
+.commands {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    @include fluid(margin-bottom, 30, 40);
+
+    .group {
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(tablet) {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .logo {
+        @include fluid(margin-right, 16, 20);
+  
+        img {
+          @include fluid(height, 60, 80);
+        }
+
+        @include breakpoint(tablet) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+  
+        h1 {
+          @include fluid(font-size, 24, 32);
+        }
+
+        span {
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

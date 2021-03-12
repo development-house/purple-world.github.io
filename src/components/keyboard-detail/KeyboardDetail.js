@@ -9,7 +9,7 @@ import keyStyle from '../keyboard/Key.module.scss'
 const KeyboardDetail = ({currentKey}) => {
   const tagsData = YAML.parse(useStaticQuery(
     graphql`
-      query {
+      query KeyboardDetail {
         allKeybindings {
           nodes {
             tags

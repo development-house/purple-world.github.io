@@ -34,6 +34,7 @@
   
     .list {
       .item {
+        @include fluid(margin-top, 15, 15);
         @include fluid(margin-right, 15, 15);
   
         &:last-of-type {
@@ -54,6 +55,7 @@
         }
 
         .item {
+          margin-top: 0;
           @include fluid("margin-bottom", 15, 15);
 
           &:last-of-type {

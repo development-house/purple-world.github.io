@@ -14,7 +14,7 @@ import style from './Keyboard.module.scss'
 const Keyboard = memo(({keyEvent, activeTags}) => {
   const keybindingsData = useStaticQuery(
     graphql`
-      query {
+      query Keyboard {
         allKeybindings {
           nodes {
             keybinds
