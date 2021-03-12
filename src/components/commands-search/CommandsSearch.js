@@ -1,4 +1,5 @@
 import React from 'react'
+import SVG from 'react-inlinesvg'
 
 import style from './CommandsSearch.module.scss'
 
@@ -16,7 +17,7 @@ const CommandsSearch = ({searchEvent, searchValue}) => {
           className={style.reset}
           onClick={() => searchEvent(null)}
         >
-          <span>X</span>
+          <SVG src={'/icons/crossmark.svg'} />
         </div>
       </div>
     </div>

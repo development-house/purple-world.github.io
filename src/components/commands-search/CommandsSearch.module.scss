@@ -26,13 +26,18 @@
     }
 
     .reset {
-      @include fluid(font-size, 16, 20);
+      display: flex;
       @include fluid("padding-top", 8, 10);
       @include fluid("padding-right", 8, 12);
       @include fluid("padding-bottom", 8, 10);
       @include fluid("padding-left", 8, 12);
-      opacity: 0.66;
       cursor: pointer;
+      
+      svg {
+        @include fluid("height", 20, 24);
+        fill: $color-text-primary;
+        opacity: 0.66;
+      }
     }
   }
 }
