@@ -17,12 +17,12 @@
 #   priority: 2
 #   href: "https://purpleworld.net"
 #   text: "Forums"
-- link: "keybindings"
-  priority: 2
-  to: "/keybindings"
-  text: "Keybindings"
-- link: "commands"
-  priority: 3
-  to: "/commands"
-  text: "Commands"
+# - link: "keybindings"
+#   priority: 2
+#   to: "/keybindings"
+#   text: "Keybindings"
+# - link: "commands"
+#   priority: 3
+#   to: "/commands"
+#   text: "Commands"
 
