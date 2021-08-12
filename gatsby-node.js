@@ -92,6 +92,6 @@ exports.sourceNodes = async ({actions, createNodeId, createContentDigest}) => {
     createNode(node)
   }
 
-  await getKeybindingsConfig()
-  await getCommandsConfig()
+//   await getKeybindingsConfig()
+//   await getCommandsConfig()
 }
