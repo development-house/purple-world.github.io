@@ -13,7 +13,3 @@
   priority: 1
   to: "/launcher"
   text: "Download launcher"
-- link: "forums"
-  priority: 2
-  href: "https://purpleworld.net"
-  text: "Forums"

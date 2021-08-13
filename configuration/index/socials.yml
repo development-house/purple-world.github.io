@@ -8,17 +8,13 @@
 # ------------------------------------------------------------------------
 
 - social: "discord"
-  priority: 1
-  href: "https://discord.gg/xTSA32P"
-  icon: "discord.svg"
-- social: "reddit"
   priority: 2
-  href: "https://www.reddit.com/r/PurpleWorld"
-  icon: "reddit.svg"
-- social: "twitter"
-  priority: 3
-  href: "https://twitter.com/PurpleWorldRP"
-  icon: "twitter.svg"
+  href: "https://discord.gg/t6sVSwVe5G"
+  icon: "discord.svg"
+- social: "tebex"
+  priority: 1
+  href: "https://purpleworld.tebex.io/"
+  icon: "tebex.svg"
 - social: "patreon"
   priority: 4
   href: "https://www.patreon.com/purpleworld"
