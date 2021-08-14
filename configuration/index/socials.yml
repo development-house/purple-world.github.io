@@ -11,10 +11,10 @@
   priority: 2
   href: "https://discord.gg/t6sVSwVe5G"
   icon: "discord.svg"
-- social: "tebex"
-  priority: 1
-  href: "https://purpleworld.tebex.io/"
-  icon: "tebex.svg"
+# - social: "tebex"
+#   priority: 1
+#   href: "https://purpleworld.tebex.io/"
+#   icon: "tebex.svg"
 - social: "patreon"
   priority: 4
   href: "https://www.patreon.com/purpleworld"
