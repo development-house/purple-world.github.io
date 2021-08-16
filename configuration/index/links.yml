@@ -9,7 +9,7 @@
 #  - text: button text (string)
 # ------------------------------------------------------------------------
 
-# - link: "launcher"
-#   priority: 1
-#   to: "/launcher"
-#   text: "Download launcher"
+- link: "launcher"
+  priority: 1
+  to: "/launcher"
+  text: "Download launcher"
