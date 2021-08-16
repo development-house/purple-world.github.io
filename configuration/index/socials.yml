@@ -7,10 +7,10 @@
 # - icon: file name (string; located in "/static/icons" folder)
 # ------------------------------------------------------------------------
 
-- social: "discord"
-  priority: 2
-  href: "https://discord.gg/t6sVSwVe5G"
-  icon: "discord.svg"
+# - social: "discord"
+#   priority: 2
+#   href: "https://discord.gg/t6sVSwVe5G"
+#   icon: "discord.svg"
 # - social: "tebex"
 #   priority: 1
 #   href: "https://purpleworld.tebex.io/"
